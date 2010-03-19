@@ -16,13 +16,13 @@ filter:
     %link{ :href => "/css/coderay.css", :rel => "stylesheet" }
   %body
     #wrap
-      #header
-        %h1
-          = @page.title
-      #article~ @content
       #footer
         %a{:href => "http://mocra.com"}
           %img{:src => "/images/logo.png"}
         Learn Ruby on Rails Course
-        
+
         .page Page 1 of 1
+      #header
+        %h1
+          = @page.title
+      #article~ @content

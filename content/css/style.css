@@ -35,7 +35,7 @@ li{margin-bottom:.8em;}
 #footer{clear:both;margin:0;padding:2em 0 0 0;}
 #footer img{vertical-align:middle;}
 #footer a{margin-right:2em;}
-span.page{display:none;}
+.page{display:none;}
 
 /* code */
 code, pre{font-family:'Menlo',monospace;color:#000;}
