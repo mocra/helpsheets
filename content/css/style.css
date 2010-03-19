@@ -32,10 +32,16 @@ li{margin-bottom:.8em;}
   color:#888;
   }
 
-#footer{clear:both;margin:0;padding:2em 0 0 0;}
+#article{padding-bottom:7em;}
+#wrap{position:relative;}
+#footer{
+  position: absolute;
+  margin:0;
+  bottom: 0;
+  right: 0;
+  left: 0;}
 #footer img{vertical-align:middle;}
 #footer a{margin-right:2em;}
-.page{display:none;}
 
 /* code */
 code, pre{font-family:'Menlo',monospace;color:#000;}

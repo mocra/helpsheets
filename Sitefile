@@ -5,3 +5,10 @@ desc 'deploy the site to the webserver'
 task :deploy => [:build, 'deploy:rsync']
 
 # EOF
+
+task :pdf do
+  articles = File.join(File.dirname(__FILE__), 'content','articles', '*')
+  Dir[articles].each do |article|
+    puts %Q{prince -o "output/articles/#{name}.pdf" "output/articles/#{name}.html"}
+  end
+end

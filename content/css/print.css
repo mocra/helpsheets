@@ -1,7 +1,11 @@
 @page {
   margin: 27mm 16mm 27mm 16mm;
   size: 210mm 297mm;
-  @bottom { content: flow(footer); }
+  @bottom {
+    padding-left: 28%;
+    content: flow(footer);
+    
+  }
 }
 
 *{word-wrap: break-word;hyphens:auto;}
@@ -13,10 +17,14 @@ table, blockquote, pre, div.CodeRay, .sidenote {
 .CodeRay, .CodeRay pre {
   overflow: hidden !important;
 }
-
-div.page{display:inline;float:right;}
-
 #footer {
   flow: static(footer);
+}
+
+div.page {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "Page " counter(page) " of " counter(pages)
 }
 
