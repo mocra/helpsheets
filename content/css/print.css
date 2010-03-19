@@ -1,0 +1,23 @@
+body {
+/*  font-size: 12pt;*/
+}
+
+table, blockquote, pre, div.CodeRay { 
+  page-break-inside: avoid;
+}
+
+.CodeRay, .CodeRay pre {
+  border: none !important;
+  overflow: hidden !important;
+}
+
+@page {
+  margin: 27mm 16mm 27mm 16mm;
+  size: 210mm 297mm;
+  @footnotes {
+    border-top: thin solid black;
+    padding-top: 0.3em;
+    margin-top: 0.6em;
+    margin-left: 30%;
+  }
+}

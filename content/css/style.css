@@ -1,0 +1,33 @@
+html{margin:0;font:10pt/1.26 "Helvetica Neue";color:#333;}
+#wrap{margin:0 0 0 28%;}
+
+/* headers */
+h1,h2,h3,h4,h5,h6{font-family:"Helvetica Neue";margin:2em 0 0.5em 0;page-break-after:avoid;}
+h1{padding:0em 0 1em 0;margin:0;font-size:3em;font-weight:100;font-family:'HelveticaNeue-UltraLight','Helvetica Neue UltraLight','Helvetica Neue',Helvetica,sans-serif;}
+h2{font-size:1.2em;text-transform:uppercase;font-weight:bold;}
+h3{font-size:1em;font-weight:bold;}
+
+/* quotes */
+q::before{content:"\201C";}
+q::after{content:"\201D";}
+
+/* misc */
+p{margin:0}
+a{text-decoration:none;color:black}
+
+/* sidenotes */
+.sidenote{
+  float:left;
+  clear:left;
+  margin:0 0 1em -40%;
+  width:36%;
+  font-style:normal;
+  text-indent:0;
+  text-align:right;
+  page-break-inside:avoid;
+  }
+
+/* code */
+code, pre{font-family:'Monaco';padding:0 5px;color:#000;}
+
+
