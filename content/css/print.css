@@ -1,6 +1,4 @@
-body {
-/*  font-size: 12pt;*/
-}
+*{word-wrap: break-word;hyphens:auto;}
 
 table, blockquote, pre, div.CodeRay, .sidenote { 
   page-break-inside: avoid;
@@ -11,6 +9,8 @@ table, blockquote, pre, div.CodeRay, .sidenote {
   overflow: hidden !important;
 }
 
+div.page{display:block;float:right;}
+
 @page {
   margin: 27mm 16mm 27mm 16mm;
   size: 210mm 297mm;
@@ -20,4 +20,6 @@ table, blockquote, pre, div.CodeRay, .sidenote {
     margin-top: 0.6em;
     margin-left: 30%;
   }
+  @bottom { content: flow(footer); }
+  
 }

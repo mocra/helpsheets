@@ -7,6 +7,8 @@ h1{padding:0em 0 1em 0;margin:0;font-size:3em;font-weight:100;font-family:'Helve
 h2{font-size:1.2em;text-transform:uppercase;font-weight:bold;}
 h3{font-size:1em;font-weight:bold;}
 
+a img{border:none;}
+
 /* quotes */
 q::before{content:"\201C";}
 q::after{content:"\201D";}
@@ -30,7 +32,10 @@ li{margin-bottom:.8em;}
   color:#888;
   }
 
+#footer{clear:both;margin:0;padding:2em 0 0 0;}
+#footer img{vertical-align:middle;}
+#footer a{margin-right:2em;}
+span.page{display:none;}
+
 /* code */
-code, pre{font-family:'Menlo', monospace;color:#000;}
-
-
+code, pre{font-family:'Menlo',monospace;color:#000;}
