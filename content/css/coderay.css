@@ -1,17 +1,16 @@
 div.CodeRay {
-  padding: 0.5em;
   margin-bottom: 1.3em;
-  background-color: #eee;
-  border: 1px solid #aaa;
-/*  font: 1.1em Monaco, 'Courier New', 'Terminal', monospace;*/
   color: #100;
+  overflow: hidden;
 }
 div.CodeRay pre {
-  padding: 0px;
   margin: 0px;
-  overflow: auto;
   background-color: transparent;
   border: none;
+}
+
+div.CodeRay:hover {
+  overflow: visible;
 }
 
 div.CodeRay { }
