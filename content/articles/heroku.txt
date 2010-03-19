@@ -7,14 +7,18 @@ filter:
 
 h2. What is git?
 
-bq. Git is a free & open source, distributed version control system  designed to handle 
-    everything from small to very large projects with speed and efficiency.
+bq. Git is a free & open source, distributed version control system  designed to handle everything from small to very large projects with speed and efficiency.
+
+p(sidenote). Git is a free & open source, distributed version control system
 
 When you work on any project, on your own or collaborativly it is important to use some kind of version control. Most people 
 working with Ruby choose to use Git. This short guide will teach _the bare minimum_ ammount of git you need to know to deploy 
 you rails app to _heroku_ and have a way to fix things if they break using version control.
 
 h3. Installing Git
+
+p(sidenote). *Figure 1*
+This code sample to the right is totally made up and irrelevant and needs to be replaced, as does this text
 
 <% coderay(:lang => "ruby") do -%>
 # call-seq:
@@ -36,6 +40,8 @@ end
 <% end -%>
 
 h3. Using Git
+
+p(sidenote). Git isn't that hard once you get the hang of a few basic commands
 
 After you have created your new project navigate to your project folder with terminal and use the command @git init@ to create 
 a .git folder in your projects root directory. This folder holds all the information git needs to version your project.
