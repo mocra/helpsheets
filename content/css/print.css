@@ -2,7 +2,7 @@ body {
 /*  font-size: 12pt;*/
 }
 
-table, blockquote, pre, div.CodeRay { 
+table, blockquote, pre, div.CodeRay, .sidenote { 
   page-break-inside: avoid;
 }
 

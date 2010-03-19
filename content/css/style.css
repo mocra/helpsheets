@@ -12,8 +12,11 @@ q::before{content:"\201C";}
 q::after{content:"\201D";}
 
 /* misc */
-p{margin:0}
+p{margin:0;margin-bottom:.8em;}
 a{text-decoration:none;color:black}
+
+ol,ul,dl{margin:0;padding:0;padding-left:1.5em;}
+li{margin-bottom:.8em;}
 
 /* sidenotes */
 .sidenote{
@@ -24,12 +27,10 @@ a{text-decoration:none;color:black}
   font-style:normal;
   text-indent:0;
   text-align:right;
-  page-break-inside:avoid;
   color:#888;
   }
 
 /* code */
 code, pre{font-family:'Menlo', monospace;color:#000;}
-code{padding: 0 5px;}
 
 
