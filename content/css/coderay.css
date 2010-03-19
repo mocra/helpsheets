@@ -1,7 +1,8 @@
 div.CodeRay {
-  margin-bottom: 1.3em;
+  margin: 1em 0 1em 0em;
   color: #100;
   overflow: hidden;
+  line-height: 1.2em;
 }
 div.CodeRay pre {
   margin: 0px;

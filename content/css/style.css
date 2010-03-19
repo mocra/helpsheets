@@ -1,4 +1,4 @@
-html{margin:0;font:10pt/1.26 "Helvetica Neue";color:#333;}
+html{margin:0;font:10pt/1.5 "Helvetica Neue";color:#333;}
 #wrap{margin:0 0 0 28%;}
 
 /* headers */
@@ -28,6 +28,7 @@ a{text-decoration:none;color:black}
   }
 
 /* code */
-code, pre{font-family:'Monaco';color:#000;}
+code, pre{font-family:'Menlo', monospace;color:#000;}
+code{padding: 0 5px;}
 
 
