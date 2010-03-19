@@ -34,6 +34,7 @@ def render_page
   str
 end
 <% end -%>
+
 h3. Using Git
 
 After you have created your new project navigate to your project folder with terminal and use the command @git init@ to create 
