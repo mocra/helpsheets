@@ -11,9 +11,9 @@ We have compiled a list of software that we will be using over the course of the
 
 p(sidenote). Make sure you install the software in order.
 
-# *Ruby 1.8.7 (of course)*
+# *Ruby 1.8.6/1.8.7 (of course)*
 ## *Instructions for OS X*
-Ruby on OS X comes with the developer tools that can be found on disk two of your installation disks.
+Ruby on OS X comes with the developer tools that can be found on your installation disk.
 ## *Instructions for PC*
 Grab Ruby 1.8.7 from "http://rubyforge.org/frs/?group_id=167":(http://rubyforge.org/frs/?group_id=167) and follow install instructions.
 # *RubyGems*
@@ -22,7 +22,7 @@ RubyGems is the standard Ruby package manager. It's similar to apt-get, emerge, 
 You are now ready to install rails, open up terminal (command promt in windows) and type @gem install rails@ _yep, it was that was easy._ 
 # *Git*
 ## *Instructions for OS X*
-The easiest way to get Git on OS X is using MacPorts, download your copy from "http://www.macports.org/install.php":(http://www.macports.org/install.php) and install. Next fire up terminal and run @sudo port install git-core@ to install Git.
+The easiest way to get Git on OS X is using the git-osx-installer, download your copy from "http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg":(http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg) and install.
 ## *Instructions for PC*
 The instructions for PC can be found here: "https://git.wiki.kernel.org/index.php/Installation":(https://git.wiki.kernel.org/index.php/Installation).
 # *A syntax highlighting text editor*
