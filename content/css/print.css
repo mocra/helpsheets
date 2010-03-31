@@ -13,4 +13,5 @@ table,blockquote,pre,div.CodeRay,.sidenote{page-break-inside:avoid;}
 a{text-decoration:none;color:black}
 .CodeRay,.CodeRay pre{overflow:hidden !important;}
 #footer{flow:static(footer);}
+#footer a img{width:123px;height:20px;}
 div.page{position:absolute;right:0;top:0;content:"Page " counter(page) " of " counter(pages)}
