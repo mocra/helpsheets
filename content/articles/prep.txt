@@ -31,3 +31,7 @@ This is what you are going to be spending most of your time in so use something 
 If all that went smoothly you are now ready for the Mocra learnRoR course. If you are having problems with any of the steps dont hesitate to flick us an email and we will sort you out.
 
 See you soon.
+
+As an alternative if you are running windows you can try using Instant Rails "http://rubyforge.org/projects/instantrails/":(http://rubyforge.org/projects/instantrails/).
+
+bq. Instant Rails is a one-stop Rails runtime solution containing Ruby, Rails, Apache, and MySQL, all pre-configured and ready to run. No installer, you simply drop it into the directory of your choice and run it. It does not modify your system environment.
