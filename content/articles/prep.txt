@@ -1,0 +1,33 @@
+---
+title:       Preparing for the course
+filter:
+  - erb
+  - textile
+---
+
+h2. The software we will be using
+
+We have compiled a list of software that we will be using over the course of the next few weeks and hopefully if you will continue to use it for many years to come. If you have any problems installing any of the software below please contact us prior to the course so that we can sort out any problems before we get started and don't waste any time on the day.
+
+p(sidenote). Make sure you install the software in order.
+
+# *Ruby 1.8.7 (of course)*
+## *Instructions for OS X*
+Ruby on OS X comes with the developer tools that can be found on disk two of your installation disks.
+## *Instructions for PC*
+Grab Ruby 1.8.7 from "http://rubyforge.org/frs/?group_id=167":(http://rubyforge.org/frs/?group_id=167) and follow install instructions.
+# *RubyGems*
+RubyGems is the standard Ruby package manager. It's similar to apt-get, emerge, and other OS package managers. Go ahead and download the latest version from "http://rubyforge.org/frs/?group_id=126":(http://rubyforge.org/frs/?group_id=126) extract, then run _ruby setup.rb_.
+# *Rails 2.3.5*
+You are now ready to install rails, open up terminal (command promt in windows) and type @gem install rails@ _yep, it was that was easy._ 
+# *Git*
+## *Instructions for OS X*
+The easiest way to get Git on OS X is using MacPorts, download your copy from "http://www.macports.org/install.php":(http://www.macports.org/install.php) and install. Next fire up terminal and run @sudo port install git-core@ to install Git.
+## *Instructions for PC*
+The instructions for PC can be found here: "https://git.wiki.kernel.org/index.php/Installation":(https://git.wiki.kernel.org/index.php/Installation).
+# *A syntax highlighting text editor*
+This is what you are going to be spending most of your time in so use something you are comfortable with that also has syntax highlighting for @.erb@, and @.rb@. Everyone at Mocra uses (and loves to use) "Textmate":(http://macromates.com/) (only os x) and I highly reccomend giving it a go. For you windows users I recommend using "_E Text Editor_":(http://www.e-texteditor.com/) because it supports textmate bundles that will make your life much easier.
+
+If all that went smoothly you are now ready for the Mocra learnRoR course. If you are having problems with any of the steps dont hesitate to flick us an email and we will sort you out.
+
+See you soon.

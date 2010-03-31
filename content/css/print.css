@@ -8,23 +8,9 @@
   }
 }
 
-*{word-wrap: break-word;hyphens:auto;}
-
-table, blockquote, pre, div.CodeRay, .sidenote { 
-  page-break-inside: avoid;
-}
-
-.CodeRay, .CodeRay pre {
-  overflow: hidden !important;
-}
-#footer {
-  flow: static(footer);
-}
-
-div.page {
-  position: absolute;
-  right: 0;
-  top: 0;
-  content: "Page " counter(page) " of " counter(pages)
-}
-
+*{word-wrap:break-word;hyphens:auto;}
+table,blockquote,pre,div.CodeRay,.sidenote{page-break-inside:avoid;}
+a{text-decoration:none;color:black}
+.CodeRay,.CodeRay pre{overflow:hidden !important;}
+#footer{flow:static(footer);}
+div.page{position:absolute;right:0;top:0;content:"Page " counter(page) " of " counter(pages)}
