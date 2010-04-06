@@ -28,7 +28,7 @@ ruby 1.8.7 (2009-06-08 patchlevel 173) [universal-darwin10.0]
 
 h3. RubyGems
 
-RubyGems is the standard Ruby package manager. You should already have this as it comes with OS X but you will want to update it:
+RubyGems is the standard Ruby package manager. You should already have this as it comes with OS X 10.5+ but you will want to update it:
 
 <% coderay(:lang => "bash") do -%>
 $ sudo gem update --system
