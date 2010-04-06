@@ -76,7 +76,7 @@ This is what you are going to be spending most of your time in so use something 
 ## "RadRails":http://www.radrails.org/
 ## "Vim":http://www.vim.org/
 # *Screensharing*
-
+To set up screensharing head over to the "TightVNC":http://www.tightvnc.com website and download and install, when it asks you for a _Primary password_ set it to _'mocra'_. You will need to keep this app running during the Mocra Ruby on Rails training course.
 
 h2. Whats next?
 
