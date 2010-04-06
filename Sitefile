@@ -12,3 +12,5 @@ task :pdf do
     puts %Q{prince -o "output/articles/#{name}.pdf" "output/articles/#{name}.html"}
   end
 end
+
+SITE.output_dir = "public"

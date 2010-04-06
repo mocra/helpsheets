@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      learnRoR Helpsheets
+    </title>
+    <link href="../css/style.css" rel="stylesheet" media="all" />
+    <link href="../css/screen.css" rel="stylesheet" media="screen, projection" />
+    <link href="../css/print.css" rel="stylesheet" media="print" />
+    <link href="../css/coderay.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="footer">
+        <a href="http://mocra.com">
+          <img src="../images/logo.png" />
+        </a>
+        Learn Ruby on Rails Course
+        <div class="page"></div>
+      </div>
+      <div id="header">
+        <h1>
+          How to deploy your rails app
+        </h1>
+      </div>
+      <div id="article">
+        <h2>Using Git and Heroku for simple deployment</h2>
+        <p class="sidenote">Git is a free &amp; open source distributed version control system</p>
+        <p>After you&#8217;ve created your new project navigate to your project folder using terminal.</p>
+        <ol>
+        	<li><strong>Initialize Git</strong> <br />
+        <code>git init</code></li>
+        	<li><strong>Add your project files</strong> <br />
+        <code>git add .</code></li>
+        	<li><strong>Commit your project files</strong> <br />
+        <code>git commit -m "Initial commit"</code></li>
+        	<li><strong>Sign up for a Heroku account at</strong> <a href="http://api.heroku.com/signup">heroku.com</a></li>
+        	<li><strong>Install heroku gem</strong> <br />
+        <code>gem install heroku</code></li>
+        	<li><strong>Create a heroku project</strong> <br />
+        <code>heroku create myapp</code></li>
+        	<li><strong>Deploy your project files (to heroku)</strong> <br />
+        <code>git push heroku master</code></li>
+        </ol>
+        <h2>Commiting</h2>
+        <p class="sidenote">It is easier to revert to old versions of your code if something goes wrong</p>
+        <p>Each time you make a major change to your code commit your work.</p>
+        <ol>
+        	<li><code>git add .</code></li>
+        	<li><code>git commit -m "Your commit message here"</code></li>
+        </ol>
+        <h2>Re-deploying</h2>
+        <p>When you want the world to see your work. This sends all the latest commits up to your Heroku repository and restarts the web app.</p>
+        <ol>
+        	<li><code>git add .</code></li>
+        	<li><code>git commit -m "Your commit message here"</code></li>
+        	<li><code>git push heroku master</code></li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

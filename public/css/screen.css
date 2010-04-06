@@ -1,0 +1,8 @@
+body { margin: 0; }
+#wrap {
+  float: right;
+  padding: 0 200px 0 0;
+  width: 450px;
+  margin-top: 3em;
+}
+#footer{margin-bottom:2em;}

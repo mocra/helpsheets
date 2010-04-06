@@ -1,0 +1,17 @@
+@page {
+  margin: 27mm 16mm 27mm 16mm;
+  size: 210mm 297mm;
+  @bottom {
+    padding-left: 28%;
+    content: flow(footer);
+  }
+}
+
+#article{padding-bottom:1em;}
+*{word-wrap:break-word;hyphens:auto;}
+table,blockquote,pre,div.CodeRay,.sidenote{page-break-inside:avoid;}
+a{text-decoration:none;color:black}
+.CodeRay,.CodeRay pre{overflow:hidden !important;}
+#footer{flow:static(footer);}
+#footer a img{width:123px;height:20px;}
+div.page{position:absolute;right:0;top:0;content:"Page " counter(page) " of " counter(pages)}
