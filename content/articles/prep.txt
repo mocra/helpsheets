@@ -9,29 +9,79 @@ h2. The software we will be using
 
 We have compiled a list of software that we will be using over the course of the next few weeks and hopefully if you will continue to use it for many years to come. If you have any problems installing any of the software below please contact us prior to the course so that we can sort out any problems before we get started and don't waste any time on the day.
 
-p(sidenote). Make sure you install the software in order.
+h3. This guide has been broken up into three sections: 
 
-# *Ruby 1.8.6/1.8.7 (of course)*
-## *Instructions for OS X*
+"OS X":#osx, "Windows":#windows and "Unix/Linux":#linux
+
+<a name="osx"></a>
+
+h2. OS X
+
+<!-- p(sidenote). Make sure you install the software in order. -->
+
+# *Ruby 1.8.6/1.8.7*
 Ruby on OS X comes with the developer tools that can be found on your installation disk.
-## *Instructions for PC*
-Grab Ruby 1.8.7 from "http://rubyforge.org/frs/?group_id=167":(http://rubyforge.org/frs/?group_id=167) and follow install instructions.
 # *RubyGems*
-RubyGems is the standard Ruby package manager. It's similar to apt-get, emerge, and other OS package managers. Go ahead and download the latest version from "http://rubyforge.org/frs/?group_id=126":(http://rubyforge.org/frs/?group_id=126) extract, then run _ruby setup.rb_.
+RubyGems is the standard Ruby package manager. You should already have this as it comes with OS X but you will want to update it:
+<% coderay(:lang => "javascript") do -%>
+$ gem update --system
+$ gem -v
+1.3.5
+<% end -%>
+
 # *Rails 2.3.5*
-You are now ready to install rails, open up terminal (command promt in windows) and type @gem install rails@ _yep, it was that was easy._ 
+You are now ready to install rails, open up terminal and type the following:
+<% coderay(:lang => "javascript") do -%>
+$ gem install rails
+$ rails -v
+2.3.5
+<% end -%>
+
 # *Git*
-## *Instructions for OS X*
-The easiest way to get Git on OS X is using the git-osx-installer, download your copy from "http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg":(http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg) and install.
-## *Instructions for PC*
-The instructions for PC can be found here: "https://git.wiki.kernel.org/index.php/Installation":(https://git.wiki.kernel.org/index.php/Installation).
+The easiest way to get Git on OS X is using the git-osx-installer, download your copy from "http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg":http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg and install.
 # *A syntax highlighting text editor*
-This is what you are going to be spending most of your time in so use something you are comfortable with that also has syntax highlighting for @.erb@, and @.rb@. Everyone at Mocra uses (and loves to use) "Textmate":(http://macromates.com/) (only os x) and I highly reccomend giving it a go. For you windows users I recommend using "_E Text Editor_":(http://www.e-texteditor.com/) because it supports textmate bundles that will make your life much easier.
+This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
+## "Textmate":http://macromates.com/ (Everyone at Mocra uses (and loves to use) "Textmate":http://macromates.com/ and I highly reccomend giving it a go.)
+## "RadRails":http://www.radrails.org/
+## "Vim":http://www.vim.org/
+# *Screensharing*
+To turn on screensharing in OS X go into your _'System Prefrences'_, click _'Sharing'_ and tick _'Screen Sharing'_, *make sure you also tick* _'Anyone may request permission to control screen'_ under _'Computer Settings'_.
+
+<a name="windows"></a>
+
+h2. Windows
+
+bq. "Instant Rails is a one-stop Rails runtime solution containing Ruby, Rails, Apache, and MySQL, all pre-configured and ready to run. No installer, you simply drop it into the directory of your choice and run it. It does not modify your system environment."
+
+# *Ruby/Rails/Apache/MySQL*
+Instant Rails "http://rubyforge.org/projects/instantrails/":http://rubyforge.org/projects/instantrails/.
+# *Git*
+The instructions for PC can be found here: "https://git.wiki.kernel.org/index.php/Installation":(https://git.wiki.kernel.org/index.php/Installation.
+# *A syntax highlighting text editor*
+This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
+## "_E Text Editor_":http://www.e-texteditor.com/ (Supports textmate bundles)
+## "_InType_":http://intype.info/home/index.php
+## "Notepad++":http://notepad-plus.sourceforge.net/uk/site.htm
+## "RadRails":http://www.radrails.org/
+## "Vim":http://www.vim.org/
+# *Screensharing*
+To set up screensharing head over to the "TightVNC":http://www.tightvnc.com website and download the 2.0 Beta 1 and install, when it asks you for a _Primary password_ set it to _'mocra'_. You will need to keep this app running during the Mocra Ruby on Rails training course.
+
+<a name="linux"></a>
+
+h2. Unix/Linux
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+# *A syntax highlighting text editor*
+This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
+## "_Scribes_":http://scribes.sourceforge.net/
+## "RadRails":http://www.radrails.org/
+## "Vim":http://www.vim.org/
+# *Screensharing*
+
+
+h2. Whats next?
 
 If all that went smoothly you are now ready for the Mocra learnRoR course. If you are having problems with any of the steps dont hesitate to flick us an email and we will sort you out.
 
 See you soon.
-
-As an alternative if you are running windows you can try using Instant Rails "http://rubyforge.org/projects/instantrails/":(http://rubyforge.org/projects/instantrails/).
-
-bq. Instant Rails is a one-stop Rails runtime solution containing Ruby, Rails, Apache, and MySQL, all pre-configured and ready to run. No installer, you simply drop it into the directory of your choice and run it. It does not modify your system environment.
