@@ -1,0 +1,54 @@
+---
+title:  Ruby on Rails - Basics
+filter:
+  - erb
+  - textile
+---
+
+h2. Ruby on Rails - Basics
+
+
+h3. Creating new Rails app
+
+<% coderay(:lang => "bash") do -%>
+$ rails myapp
+$ cd myapp
+$ rake
+<% end -%>
+
+The last line runs the (non-existent) test suite in your app. Why? Just to check that default configuration is working to databases etc.
+
+h3. Commands
+
+Two sets of commands:
+
+# rake tasks
+# scripts
+
+Available rake tasks, and an example usage:
+
+<% coderay(:lang => "bash") do -%>
+$ rake -T
+$ rake routes
+<% end %>
+
+Available scripts, and an example usage:
+
+p(sidenote). Windows: 'ls -al' equivalent to 'dir'
+
+<% coderay(:lang => "bash") do -%>
+$ ls -al scripts/
+$ script/server
+<% end %>
+
+h3. Generators
+
+Great way to learn Rails is to use generators.
+
+<% coderay(:lang => "bash") do -%>
+$ script/generate
+$ script/generate model Tweet message:string user_id:integer
+$ rake db:migrate
+<% end %>
+
+View each generated file to see what is generated!

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      learnRoR Helpsheets
+    </title>
+    <link href="../css/style.css" rel="stylesheet" media="all" />
+    <link href="../css/screen.css" rel="stylesheet" media="screen, projection" />
+    <link href="../css/print.css" rel="stylesheet" media="print" />
+    <link href="../css/coderay.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="footer">
+        <a href="http://mocra.com">
+          <img src="../images/logo.png" />
+        </a>
+        Learn Ruby on Rails Course
+        <div class="page"></div>
+      </div>
+      <div id="header">
+        <h1>
+          Ruby on Rails - Basics
+        </h1>
+      </div>
+      <div id="article">
+        <h2>Ruby on Rails &#8211; Basics</h2>
+        <h3>Creating new Rails app</h3>
+        <div class="CodeRay">
+        <pre>$ rails myapp&#x000A;$ cd myapp&#x000A;$ rake</pre>
+        </div>
+        <p>The last line runs the (non-existent) test suite in your app. Why? Just to check that default configuration is working to databases etc.</p>
+        <h3>Commands</h3>
+        <p>Two sets of commands:</p>
+        <ol>
+        	<li>rake tasks</li>
+        	<li>scripts</li>
+        </ol>
+        <p>Available rake tasks, and an example usage:</p>
+        <div class="CodeRay">
+        <pre>$ rake -T&#x000A;$ rake routes</pre>
+        </div>
+        <p>Available scripts, and an example usage:</p>
+        <p class="sidenote">Windows: &#8216;ls -al&#8217; equivalent to &#8216;dir&#8217;</p>
+        <div class="CodeRay">
+        <pre>$ ls -al scripts/&#x000A;$ script/server</pre>
+        </div>
+        <h3>Generators</h3>
+        <p>Great way to learn Rails is to use generators.</p>
+        <div class="CodeRay">
+        <pre>$ script/generate&#x000A;$ script/generate model Tweet message:string user_id:integer&#x000A;$ rake db:migrate</pre>
+        </div>
+        <p>View each generated file to see what is generated!</p>
+      </div>
+    </div>
+  </body>
+</html>
