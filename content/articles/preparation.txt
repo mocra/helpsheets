@@ -17,8 +17,6 @@ h3. This guide has been broken up into three sections:
 
 h2. OS X
 
-<!-- p(sidenote). Make sure you install the software in order. -->
-
 # *Ruby 1.8.6/1.8.7*
 Ruby on OS X comes with the developer tools that can be found on your installation disk.
 # *RubyGems*

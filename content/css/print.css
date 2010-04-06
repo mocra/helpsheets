@@ -4,10 +4,10 @@
   @bottom {
     padding-left: 28%;
     content: flow(footer);
-    
   }
 }
 
+#article{padding-bottom:1em;}
 *{word-wrap:break-word;hyphens:auto;}
 table,blockquote,pre,div.CodeRay,.sidenote{page-break-inside:avoid;}
 a{text-decoration:none;color:black}

@@ -5,38 +5,39 @@ filter:
   - textile
 ---
 
-h2. What is git?
-
-bq. "Git is a free & open source, distributed version control system  designed to handle everything from small to very large projects with speed and efficiency."
-
-p(sidenote). Git is a free & open source, distributed version control system
-
-When you work on any project, on your own or collaborativly it is important to use some kind of version control. Most people working with Ruby choose to use Git. This short guide will teach _the bare minimum_ ammount of git you need to know to deploy you rails app to _heroku_ and have a way to fix things if they break using version control.
-
-<%# coderay(:lang => "ruby") do -%>
-<%# end -%>
-
-h2. What is Heroku?
-
-p(sidenote). Heroku is a fantastic platform for deploying small rails apps
-# Sign up for a Heroku account at "heroku.com":http://api.heroku.com/signup
-# @sudo gem install heroku@
-This installs a _ruby gem_ called _heroku_ that will control our online applications through the use of the _heroku_ command.
-# @heroku create myapp@
-Because we have now installed the _heroku_ gem we can now use the _heroku_ command to create a place to host our application 
-on _heroku_.
-
 h2. Using Git and Heroku for simple deployment
 
-p(sidenote). Git isn't that hard once you get the hang of a few basic commands
+p(sidenote). Git is a free & open source distributed version control system
 
-After you have created your new project navigate to your project folder with terminal and use the command @git init@ to create a .git folder in your projects root directory. This folder holds all the information git needs to version your project.
+After you've created your new project navigate to your project folder using terminal.
 
-We can break the rest up into 3 simple steps.
+# *Initialize Git* 
+@git init@
+# *Add your project files* 
+@git add .@
+# *Commit your project files* 
+@git commit -m "Initial commit"@
+# *Sign up for a Heroku account at* "heroku.com":http://api.heroku.com/signup
+# *Install heroku gem* 
+@gem install heroku@
+# *Create a heroku project* 
+@heroku create myapp@
+# *Deploy your project files (to heroku)* 
+@git push heroku master@
 
-# *Add your project files*
-This is to tell git what files are new, what files have changed and what files are going to be deleted. The first time you do this you will want to add every file within your projects root directory so use the command @git add .@.
-# *Commit your project files*
-Commiting your project files basically says _"All the files you just added are going to be grouped together in a version"_ this is where you can add a _commit message_ so if you need to come back to it later you know what stage the project was up to when you commited the files. To commit the files you added in the previous step use the command @git commit -m "Initial commit"@ the @-m@ flag adds the commit message _'initial commit'_.
-# *Push (deploy) your project files (to heroku)*
-To push out all your changes for the world to see use the command @git push heroku master@. This sends all the latest commits up to your Heroku repository and restarts the web app.
+h2. Commiting
+
+p(sidenote). It is easier to revert to old versions of your code if something goes wrong
+
+Each time you make a major change to your code commit your work.
+
+# @git add .@
+# @git commit -m "Your commit message here"@
+
+h2. Re-deploying
+
+When you want the world to see your work. This sends all the latest commits up to your Heroku repository and restarts the web app.
+
+# @git add .@
+# @git commit -m "Your commit message here"@
+# @git push heroku master@
