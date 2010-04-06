@@ -31,73 +31,85 @@
         <p><a href="#osx">OS X</a>, <a href="#windows">Windows</a> and <a href="#linux">Unix/Linux</a></p>
         <p><a name="osx"></a></p>
         <h2>OS X</h2>
-        <ol>
-        	<li><strong>Ruby 1.8.6/1.8.7</strong><br />
-        Ruby on OS X comes with the developer tools that can be found on your installation disk.</li>
-        	<li><strong>RubyGems</strong><br />
-        RubyGems is the standard Ruby package manager. You should already have this as it comes with OS X but you will want to update it:<br />
+        <h3>Ruby 1.8.6/1.8.7</h3>
+        <p>Ruby on OS X comes with the developer tools that can be found on your installation disk.</p>
         <div class="CodeRay">
-        <pre><span class="pd">$</span> gem update --system&#x000A;<span class="pd">$</span> gem -v&#x000A;<span class="fl">1.3</span><span class="fl">.5</span></pre>
+        <pre>$ ruby -v&#x000A;ruby 1.8.7 (2009-06-08 patchlevel 173) [universal-darwin10.0]</pre>
         </div>
-        </li>
-        	<li><strong>Rails 2.3.5</strong><br />
-        You are now ready to install rails, open up terminal and type the following:<br />
+        <h3>RubyGems</h3>
+        <p>RubyGems is the standard Ruby package manager. You should already have this as it comes with OS X but you will want to update it:</p>
         <div class="CodeRay">
-        <pre><span class="pd">$</span> gem install rails&#x000A;<span class="pd">$</span> rails -v&#x000A;<span class="fl">2.3</span><span class="fl">.5</span></pre>
+        <pre>$ sudo gem update --system&#x000A;$ gem -v&#x000A;1.3.5</pre>
         </div>
-        </li>
-        	<li><strong>Git</strong><br />
-        The easiest way to get Git on OS X is using the git-osx-installer, download your copy from <a href="http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg">http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg</a> and install.</li>
-        	<li><strong>A syntax highlighting text editor</strong><br />
-        This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
+        <h3>Rails 2.3.5</h3>
+        <p>You are now ready to install rails, open up terminal and type the following:</p>
+        <div class="CodeRay">
+        <pre>$ sudo gem install rails&#x000A;$ rails -v&#x000A;2.3.5</pre>
+        </div>
+        <h3>Git</h3>
+        <p class="sidenote">Git is for source control, deployment and access to the 1000s of Ruby/Rails open source projects.</p>
+        <p><a href="http://git-osx-installer.googlecode.com/files/git-1.7.0.3-intel-leopard.dmg">Download Git 1.7</a> or <a href="http://code.google.com/p/git-osx-installer/">Download latest version</a></p>
+        <p>Open the DMG and install the package.</p>
+        <p /><div class="CodeRay">
+        <pre>$ git --version&#x000A;git version 1.7.0.3&#x000A;<br />&#x000A;</pre><div class="CodeRay"><br />&#x000A;<pre>$ git &#8212;version<br />&#x000A;git version 1.7.0.3<br /></pre>
+        </div>
+        <p></p>
+        <h3>Text Editor</h3>
+        <p class="sidenote">&#8220;A bad craftsman blames his [bad] tools.&#8221;</p>
+        <p>This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.</p>
+        <p class="sidenote">Mocra loves TextMate.</p>
+        
         	<ol>
-        		<li><a href="http://macromates.com/">Textmate</a> (Everyone at Mocra uses (and loves to use) <a href="http://macromates.com/">Textmate</a> and I highly reccomend giving it a go.)</li>
-        		<li><a href="http://www.radrails.org/">RadRails</a></li>
-        		<li><a href="http://www.vim.org/">Vim</a></li>
-        	</ol></li>
-        	<li><strong>Screensharing</strong><br />
-        To turn on screensharing in OS X go into your <em>&#8216;System Prefrences&#8217;</em>, click <em>&#8216;Sharing&#8217;</em> and tick <em>&#8216;Screen Sharing&#8217;</em>, <strong>make sure you also tick</strong> <em>&#8216;Anyone may request permission to control screen&#8217;</em> under <em>&#8216;Computer Settings&#8217;</em>.</li>
+        		<li><a href="http://macromates.com/">Textmate</a> &#8211; free for 30 days or more; 100s of extensions</li>
+        		<li><a href="http://www.radrails.org/">RadRails</a> &#8211; free; built on Eclipse/Java</li>
+        		<li><a href="http://www.vim.org/">Vim</a> &#8211; free; the legend of terminal editors</li>
+        	</ol><h3>Screen Sharing</h3>
+        <p>Instructors will teach by showing your own computer on the communal projector. How? Via screen sharing.</p>
+        <p>Turn on screen sharing:</p>
+        <ol>
+        	<li>Go into your <em>&#8216;System Preferences&#8217;</em></li>
+        	<li>Open <em>&#8216;Sharing&#8217;</em></li>
+        	<li>Tick <em>&#8216;Screen Sharing&#8217;</em></li>
+        	<li>Open <em>&#8216;Computer Settings&#8217;</em></li>
+        	<li>Tick <em>&#8216;Anyone may request permission to control screen&#8217;</em></li>
         </ol>
+        <p><img title="Screen Sharing" src="http://img.skitch.com/20100406-j8upj4q138anekhpfuu8ci3rqd.preview.jpg" alt="Screen Sharing" /></p>
         <p><a name="windows"></a></p>
         <h2>Windows</h2>
         <blockquote>
         <p>&#8220;Instant Rails is a one-stop Rails runtime solution containing Ruby, Rails, Apache, and MySQL, all pre-configured and ready to run. No installer, you simply drop it into the directory of your choice and run it. It does not modify your system environment.&#8221;</p>
         </blockquote>
-        <ol>
-        	<li><strong>Ruby/Rails/Apache/MySQL</strong><br />
-        Instant Rails <a href="http://rubyforge.org/projects/instantrails/">http://rubyforge.org/projects/instantrails/</a>.</li>
-        	<li><strong>Git</strong><br />
-        The instructions for PC can be found here: <a href="(https://git.wiki.kernel.org/index.php/Installation">https://git.wiki.kernel.org/index.php/Installation</a>.</li>
-        	<li><strong>A syntax highlighting text editor</strong><br />
-        This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
+        <h3>Ruby/Rails/Apache/MySQL</h3>
+        <p>Instant Rails <a href="http://rubyforge.org/projects/instantrails/">http://rubyforge.org/projects/instantrails/</a>.</p>
+        <h3>Git</h3>
+        <p>The instructions for PC can be found here: <a href="(https://git.wiki.kernel.org/index.php/Installation">https://git.wiki.kernel.org/index.php/Installation</a>.</p>
+        <h3>Text Editor</h3>
+        <p>This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.</p>
+        
         	<ol>
         		<li><a href="http://www.e-texteditor.com/"><em>E Text Editor</em></a> (Supports textmate bundles)</li>
         		<li><a href="http://intype.info/home/index.php"><em>InType</em></a></li>
         		<li><a href="http://notepad-plus.sourceforge.net/uk/site.htm">Notepad++</a></li>
         		<li><a href="http://www.radrails.org/">RadRails</a></li>
         		<li><a href="http://www.vim.org/">Vim</a></li>
-        	</ol></li>
-        	<li><strong>Screensharing</strong><br />
-        To set up screensharing head over to the <a href="http://www.tightvnc.com">TightVNC</a> website and download the 2.0 Beta 1 and install, when it asks you for a <em>Primary password</em> set it to <em>&#8216;mocra&#8217;</em>. You will need to keep this app running during the Mocra Ruby on Rails training course.</li>
-        </ol>
+        	</ol><h3>Screensharing</h3>
+        <p>To set up screensharing head over to the <a href="http://www.tightvnc.com">TightVNC</a> website and download the 2.0 Beta 1 and install, when it asks you for a <em>Primary password</em> set it to <em>&#8216;mocra&#8217;</em>. You will need to keep this app running during the Mocra Ruby on Rails training course.</p>
         <p><a name="linux"></a></p>
         <h2>Unix/Linux</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <ol>
-        	<li><strong>A syntax highlighting text editor</strong><br />
-        This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
+        <h3>Text Editor</h3>
+        <p>This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.</p>
+        
         	<ol>
         		<li><a href="http://scribes.sourceforge.net/"><em>Scribes</em></a></li>
         		<li><a href="http://www.radrails.org/">RadRails</a></li>
-        		<li><a href="http://www.vim.org/">Vim</a></li>
-        	</ol></li>
-        	<li><strong>Screensharing</strong><br />
+        		<li><a href="http://www.vim.org/">Vim</a><br />
+        h3. Screensharing<br />
         To set up screensharing head over to the <a href="http://www.tightvnc.com">TightVNC</a> website and download and install, when it asks you for a <em>Primary password</em> set it to <em>&#8216;mocra&#8217;</em>. You will need to keep this app running during the Mocra Ruby on Rails training course.</li>
-        </ol>
-        <h2>Whats next?</h2>
+        	</ol><h2>Whats next?</h2>
         <p>If all that went smoothly you are now ready for the Mocra learnRoR course. If you are having problems with any of the steps dont hesitate to flick us an email and we will sort you out.</p>
         <p>See you soon.</p>
       </div>
     </div>
-  </body>
+  </div></body>
 </html>
