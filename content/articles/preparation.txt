@@ -67,9 +67,9 @@ This is what you are going to be spending most of your time in so use something 
 
 p(sidenote). Mocra loves TextMate.
 
-## "Textmate":http://macromates.com/ - free for 30 days or more; 100s of extensions
-## "RadRails":http://www.radrails.org/ - free; built on Eclipse/Java
-## "Vim":http://www.vim.org/ - free; the legend of terminal editors
+* "Textmate":http://macromates.com/ - free for 30 days or more; 100s of extensions
+* "RadRails":http://www.radrails.org/ - free; built on Eclipse/Java
+* "Vim":http://www.vim.org/ - free; the legend of terminal editors
 
 h3. Screen Sharing
 
