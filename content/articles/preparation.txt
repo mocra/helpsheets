@@ -104,11 +104,11 @@ h3. Text Editor
 
 This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
 
-## "_E Text Editor_":http://www.e-texteditor.com/ (Supports textmate bundles)
-## "_InType_":http://intype.info/home/index.php
-## "Notepad++":http://notepad-plus.sourceforge.net/uk/site.htm
-## "RadRails":http://www.radrails.org/
-## "Vim":http://www.vim.org/
+* "_E Text Editor_":http://www.e-texteditor.com/ - free for 30 days; supports textmate bundles
+* "Notepad++":http://notepad-plus.sourceforge.net/uk/site.htm free; fast and light.
+* "_InType_":http://intype.info/home/index.php - free; still in alpha
+* "RadRails":http://www.radrails.org/ - free; full ruby on rails development environment
+* "Vim":http://www.vim.org/ - free; the legend of command-line editors
 
 h3. Screensharing
 
@@ -123,10 +123,13 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 h3. Text Editor
 
 This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
-## "_Scribes_":http://scribes.sourceforge.net/
-## "RadRails":http://www.radrails.org/
-## "Vim":http://www.vim.org/
+
+* "_Scribes_":http://scribes.sourceforge.net/ - free; Simple, slim and sleek, yet powerful
+* "RadRails":http://www.radrails.org/ - free; full ruby on rails development environment
+* "Vim":http://www.vim.org/ - free; the legend of terminal editors
+
 h3. Screensharing
+
 To set up screensharing head over to the "TightVNC":http://www.tightvnc.com website and download and install, when it asks you for a _Primary password_ set it to _'mocra'_. You will need to keep this app running during the Mocra Ruby on Rails training course.
 
 h2. Whats next?
