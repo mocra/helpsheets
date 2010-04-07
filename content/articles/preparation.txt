@@ -226,7 +226,7 @@ To set up screen sharing head over to the "TightVNC":http://www.tightvnc.com web
 
 h2. Whats next?
 
-If all that went smoothly you are now ready for the Mocra learnRoR course. If you are having problems with any of the steps don't hesitate to flick us an email and we will sort you out.
+If all that went smoothly you are now ready for the Mocra Learn Ruby on Rails course. If you are having problems with any of the steps don't hesitate to flick us an email and we will sort you out.
 
 See you soon.
 
