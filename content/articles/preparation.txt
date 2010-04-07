@@ -11,7 +11,7 @@ We have compiled a list of software that we will be using over the course of the
 
 h3. This guide has been broken up into three sections: 
 
-"OS X":#osx, "Windows":#windows and "Unix/Linux":#linux
+"OS X":#osx, "Windows":#windows and "Linux (Ubuntu)":#linux
 
 <a name="osx"></a>
 
@@ -57,7 +57,7 @@ Open the DMG and install the package.
 <% coderay(:lang => "bash") do -%>
 $ git --version
 git version 1.7.0.3
-<% end %> 
+<% end -%>
 
 h3. Text Editor
 
@@ -83,42 +83,81 @@ Turn on screen sharing:
 # Open _'Computer Settings'_
 # Tick _'Anyone may request permission to control screen'_
 
-!http://img.skitch.com/20100406-j8upj4q138anekhpfuu8ci3rqd.preview.jpg(Screen Sharing)!
-
+!/../images/preparation/screensharing-mac.png(Screen Sharing)!
 
 <a name="windows"></a>
 
 h2. Windows
 
-bq. "Instant Rails is a one-stop Rails runtime solution containing Ruby, Rails, Apache, and MySQL, all pre-configured and ready to run. No installer, you simply drop it into the directory of your choice and run it. It does not modify your system environment."
+<!-- based on the tutorial at http://garbageburrito.com/blog/entry/391/a-macesque-rails-development-environment-on-windows -->
+<!-- # Install "E Text Editor":http://www.e-texteditor.com/ -->
+# Download Cygwin from "www.cygwin.com/setup.exe":http://www.cygwin.com/setup.exe and start the installing. When the installer asks you to chose a download site chose _mirror.arrnet.edu.au_ and click _next_. Next you will be asked to choose what packages you want to install, select the following:
+#* ruby (1.8.7) (click till it says _source_) 
+#* wget
+#* sqlite3 (set all 3 versions to _source_)
+#* gcc
+#* git
+#* git-completions
+#* git-gui
+#* make
+# Install "Console":http://sourceforge.net/projects/console/ and go into the _settings_ and click _add_ under _tabs_ then set the _shell_ field to @c:\cygwin\bin\bash --login -i@ and move it to the top of the tabs list.
+# Download "Ruby Gems":http://rubyforge.org/frs/?group_id=126&release_id=9501  and un-tar to _C:/cygwin/rubyGems_ then load up Console and navigate to the folder you just created and run @ruby setup.rb@.
+# Install rails and all the other gems you need: @gem install rails --include-dependencies@
+# Install sqlite3 with the following command: @gem install sqlite3-ruby --platform x86-mswin32@
+# Create a folder to keep all your rails apps in, in the _C:/cygwin/rubyGems_ folder called _Sites_
 
-h3. Ruby/Rails/Apache/MySQL
 
-Instant Rails "http://rubyforge.org/projects/instantrails/":http://rubyforge.org/projects/instantrails/.
+<!-- h3. Git -->
 
-h3. Git
+<!-- p(sidenote). Note, when installing select _Run Git from the Windows Command Prompt_ -->
 
-The instructions for PC can be found here: "https://git.wiki.kernel.org/index.php/Installation":(https://git.wiki.kernel.org/index.php/Installation.
+<!-- Head over to "code.google.com/p/msysgit":http://code.google.com/p/msysgit/ and download and install the latest version (_Git-1.7.0.2-preview20100309.exe_ at the time of writing). -->
 
 h3. Text Editor
 
+p(sidenote). We recommend using E&nbsp;Text Editor
+
 This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
 
-* "_E Text Editor_":http://www.e-texteditor.com/ - free for 30 days; supports textmate bundles
+* "E Text Editor":http://www.e-texteditor.com/ - free for 30 days; supports textmate bundles
 * "Notepad++":http://notepad-plus.sourceforge.net/uk/site.htm free; fast and light.
-* "_InType_":http://intype.info/home/index.php - free; still in alpha
+* "InType":http://intype.info/home/index.php - free; still in alpha
 * "RadRails":http://www.radrails.org/ - free; full ruby on rails development environment
 * "Vim":http://www.vim.org/ - free; the legend of command-line editors
 
 h3. Screensharing
 
+Instructors will teach by showing your own computer on the communal projector. How? Via screen sharing.
+
 To set up screensharing head over to the "TightVNC":http://www.tightvnc.com website and download the 2.0 Beta 1 and install, when it asks you for a _Primary password_ set it to _'mocra'_. You will need to keep this app running during the Mocra Ruby on Rails training course.
 
 <a name="linux"></a>
 
-h2. Unix/Linux
+h2. Linux (Ubuntu)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<% coderay(:lang => "bash") do -%>
+# Get Ruby
+$ sudo apt-get install ruby-full build-essential
+$ sudo aptitude install ruby build-essential 
+• libopenssl-ruby ruby1.8-dev
+$ ruby -v
+ruby 1.8.7
+# Install Ruby Gems
+$ sudo apt-get install rubygems
+# ??????
+$ gem -v
+1.3.5
+# Install Rails
+$ sudo gem install rails
+$ rails -v
+2.3.5
+# Install SQLite3
+$ sudo apt-get install libsqlite3-dev
+$ sudo gem install sqlite3-ruby
+<% end -%>
+
+This tutorial can be found in full over at "help.ubuntu.com/community/RubyOnRails":https://help.ubuntu.com/community/RubyOnRails
+
 
 h3. Text Editor
 
@@ -134,6 +173,10 @@ To set up screensharing head over to the "TightVNC":http://www.tightvnc.com webs
 
 h2. Whats next?
 
-If all that went smoothly you are now ready for the Mocra learnRoR course. If you are having problems with any of the steps dont hesitate to flick us an email and we will sort you out.
+If all that went smoothly you are now ready for the Mocra learnRoR course. If you are having problems with any of the steps don't hesitate to flick us an email and we will sort you out.
 
 See you soon.
+
+h3. Got 15 Minutes?
+
+If you want to run through a basic ruby tutorial head over to "tryruby.org":http://tryruby.org/ and try out ruby in your web browser!
