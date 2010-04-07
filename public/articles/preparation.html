@@ -29,6 +29,7 @@
         <p>We have compiled a list of software that we will be using over the course of the next few weeks and hopefully if you will continue to use it for many years to come. If you have any problems installing any of the software below please contact us prior to the course so that we can sort out any problems before we get started and don&#8217;t waste any time on the day.</p>
         <h3>This guide has been broken up into three sections:</h3>
         <p><a href="#osx">OS X</a>, <a href="#windows">Windows</a> and <a href="#linux" title="Ubuntu">Linux</a></p>
+        <hr />
         <p><a name="osx"></a></p>
         <h2>OS X</h2>
         <h3>Ruby 1.8.6/1.8.7</h3>
@@ -39,7 +40,7 @@
         <h3>RubyGems</h3>
         <p>RubyGems is the standard Ruby package manager. You should already have this as it comes with OS X 10.5+ but you will want to update it:</p>
         <div class="CodeRay">
-        <pre>$ sudo gem update --system&#x000A;$ gem -v&#x000A;1.3.5</pre>
+        <pre>$ sudo gem update --system&#x000A;$ gem -v&#x000A;1.3.6</pre>
         </div>
         <h3>Rails 2.3.5</h3>
         <p>You are now ready to install rails, open up terminal and type the following:</p>
@@ -73,6 +74,7 @@
         	<li>Tick <em>&#8216;Anyone may request permission to control screen&#8217;</em></li>
         </ol>
         <p><img title="Screen Sharing" src="../../images/preparation/screensharing-mac.png" alt="Screen Sharing" /></p>
+        <hr />
         <p><a name="windows"></a></p>
         <h2>Windows</h2>
         <p><!-- based on the tutorial at http://garbageburrito.com/blog/entry/391/a-macesque-rails-development-environment-on-windows --></p>
@@ -89,21 +91,26 @@
         	<li>make</li>
         </ul>
         <h3>Install Console</h3>
-        <p>Download and install <a href="http://sourceforge.net/projects/console/">Console</a> and go into the <em>settings</em> and click <em>add</em> under <em>tabs</em> then set the <em>shell</em> field to <code>c:\cygwin\bin\bash --login -i</code> and move it to the top of the tabs list.</p>
+        <p>Download and install Console from <a href="http://sourceforge.net/projects/console/">http://sourceforge.net/projects/console/</a> and go into the <em>settings</em> and click <em>add</em> under <em>tabs</em> then set the <em>shell</em> field to <code>c:\cygwin\bin\bash --login -i</code> and move it to the top of the tabs list.</p>
+        <h3>Install Ruby Gems</h3>
         <div class="CodeRay">
-        <pre>$ mkdir tmp&#x000A;$ cd tmp&#x000A;$ wget http://rubyforge.org/frs/download.php/69365/rubygems-1.3.6.tgz&#x000A;$ tar xfv rubygems-1.3.6.tgz&#x000A;$ cd rubygems-1.3.6&#x000A;$ ruby setup.rb</pre>
+        <pre>$ mkdir tmp&#x000A;$ cd tmp&#x000A;$ wget http://rubyforge.org/frs/download.php/69365/\&#x000A;rubygems-1.3.6.tgz&#x000A;$ tar xfv rubygems-1.3.6.tgz&#x000A;$ cd rubygems-1.3.6&#x000A;$ ruby setup.rb&#x000A;$ gem -v&#x000A;1.3.6</pre>
         </div>
         <h3>Install rails</h3>
         <div class="CodeRay">
         <pre>$ gem install rails --include-dependencies&#x000A;$ rails -v&#x000A;2.3.5</pre>
         </div>
         <h3>Install sqlite3</h3>
-        <p><code>gem install sqlite3-ruby --platform x86-mswin32</code></p>
+        <p><code>$ gem install sqlite3-ruby --platform x86-mswin32</code></p>
         <h3>Make a Sites folder</h3>
-        <p>Create a folder to keep all your rails apps in, in the <em>C:/cygwin/rubyGems</em> folder called <em>Sites</em></p>
+        <p class="sidenote">Somewhere to keep your rails applications</p>
+        <div class="CodeRay">
+        <pre>$ cd ~&#x000A;$ mkdir Sites&#x000A;$ cd Sites&#x000A;$ rails testapp</pre>
+        </div>
         <h3>Text Editor</h3>
-        <p>This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.</p>
         <p class="sidenote">We recommend using E&nbsp;Text Editor</p>
+        <p>This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.</p>
+        <p class="sidenote">A great shortcut when using E Text Editor is to type <code>e .</code> in console when you want to open the current folder</p>
         <ul>
         	<li><a href="http://www.e-texteditor.com/">E Text Editor</a> &#8211; free for 30 days; supports textmate bundles</li>
         	<li><a href="http://notepad-plus.sourceforge.net/uk/site.htm">Notepad++</a> free; fast and light.</li>
@@ -111,21 +118,21 @@
         	<li><a href="http://www.radrails.org/">RadRails</a> &#8211; free; full ruby on rails development environment</li>
         	<li><a href="http://www.vim.org/">Vim</a> &#8211; free; the legend of command-line editors</li>
         </ul>
-        <h3>Screensharing</h3>
+        <h3>Screen Sharing</h3>
         <p>Instructors will teach by showing your own computer on the communal projector. How? Via screen sharing.</p>
-        <p>To set up screensharing head over to the <a href="http://www.tightvnc.com">TightVNC</a> website and download the 2.0 Beta 1 and install, when it asks you for a <em>Primary password</em> set it to <em>&#8216;mocra&#8217;</em>. You will need to keep this app running during the Mocra Ruby on Rails training course.</p>
+        <p>To set up screen sharing head over to the <a href="http://www.tightvnc.com">TightVNC</a> website and download the 2.0 Beta 1 and install, when it asks you for a <em>Primary password</em> set it to <em>&#8216;mocra&#8217;</em>. You will need to keep this app running during the Mocra Ruby on Rails training course.</p>
+        <hr />
         <p><a name="linux"></a></p>
         <h2>Linux (Ubuntu)</h2>
+        <p>The following steps are a shortened version of a document that can be found at  <a href="https://help.ubuntu.com/community/RubyOnRails">https://help.ubuntu.com/community/RubyOnRails</a></p>
         <h3>Get Ruby</h3>
         <div class="CodeRay">
         <pre>$ sudo apt-get install ruby-full build-essential&#x000A;$ sudo aptitude install ruby build-essential\ &#x000A;libopenssl-ruby ruby1.8-dev&#x000A;$ ruby -v&#x000A;ruby 1.8.7</pre>
         </div>
         <h3>Install Ruby Gems</h3>
         <div class="CodeRay">
-        <pre>$ sudo apt-get install rubygems&#x000A;$ gem -v&#x000A;1.3.5</pre>
+        <pre>$ sudo apt-get install rubygems&#x000A;$ export PATH=/var/lib/gems/1.8/bin:$PATH&#x000A;$ gem -v&#x000A;1.3.5</pre>
         </div>
-        <p>To make gem work properly write gem&#8217;s path to PATH add to ~/.bashrc:</p>
-        <p><code>export PATH=/var/lib/gems/1.8/bin:$PATH</code></p>
         <h3>Install Rails</h3>
         <div class="CodeRay">
         <pre>$ sudo gem install rails&#x000A;$ rails -v&#x000A;2.3.5</pre>
@@ -134,16 +141,16 @@
         <div class="CodeRay">
         <pre>$ sudo apt-get install libsqlite3-dev&#x000A;$ sudo gem install sqlite3-ruby</pre>
         </div>
-        <p>This tutorial can be found in full over at <a href="https://help.ubuntu.com/community/RubyOnRails">help.ubuntu.com/community/RubyOnRails</a></p>
         <h3>Text Editor</h3>
         <p>This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.</p>
+        <p class="sidenote">rails.vim is the one true <em>Vim</em> plugin for Ruby on Rails <a href="http://rails.vim.tpope.net/">http://rails.vim.tpope.net/</a></p>
         <ul>
         	<li><a href="http://scribes.sourceforge.net/"><em>Scribes</em></a> &#8211; free; Simple, slim and sleek, yet powerful</li>
         	<li><a href="http://www.radrails.org/">RadRails</a> &#8211; free; full ruby on rails development environment</li>
         	<li><a href="http://www.vim.org/">Vim</a> &#8211; free; the legend of terminal editors</li>
         </ul>
-        <h3>Screensharing</h3>
-        <p>To set up screensharing head over to the <a href="http://www.tightvnc.com">TightVNC</a> website and download and install, when it asks you for a <em>Primary password</em> set it to <em>&#8216;mocra&#8217;</em>. You will need to keep this app running during the Mocra Ruby on Rails training course.</p>
+        <h3>Screen Sharing</h3>
+        <p>To set up screen sharing head over to the <a href="http://www.tightvnc.com">TightVNC</a> website and download and install, when it asks you for a <em>Primary password</em> set it to <em>&#8216;mocra&#8217;</em>. You will need to keep this app running during the Mocra Ruby on Rails training course.</p>
         <h2>Whats next?</h2>
         <p>If all that went smoothly you are now ready for the Mocra learnRoR course. If you are having problems with any of the steps don&#8217;t hesitate to flick us an email and we will sort you out.</p>
         <p>See you soon.</p>

@@ -13,6 +13,7 @@ h3. This guide has been broken up into three sections:
 
 "OS X":#osx, "Windows":#windows and "Linux (Ubuntu)":#linux
 
+<hr/>
 <a name="osx"></a>
 
 h2. OS X
@@ -33,7 +34,7 @@ RubyGems is the standard Ruby package manager. You should already have this as i
 <% coderay(:lang => "bash") do -%>
 $ sudo gem update --system
 $ gem -v
-1.3.5
+1.3.6
 <% end -%>
 
 h3. Rails 2.3.5
@@ -85,6 +86,7 @@ Turn on screen sharing:
 
 !/../images/preparation/screensharing-mac.png(Screen Sharing)!
 
+<hr/>
 <a name="windows"></a>
 
 h2. Windows
@@ -105,15 +107,20 @@ Download Cygwin from "www.cygwin.com/setup.exe":http://www.cygwin.com/setup.exe 
 
 h3. Install Console
 
-Download and install "Console":http://sourceforge.net/projects/console/ and go into the _settings_ and click _add_ under _tabs_ then set the _shell_ field to @c:\cygwin\bin\bash --login -i@ and move it to the top of the tabs list.
+Download and install Console from "http://sourceforge.net/projects/console/":http://sourceforge.net/projects/console/ and go into the _settings_ and click _add_ under _tabs_ then set the _shell_ field to @c:\cygwin\bin\bash --login -i@ and move it to the top of the tabs list.
+
+h3. Install Ruby Gems
 
 <% coderay(:lang => "bash") do -%>
 $ mkdir tmp
 $ cd tmp
-$ wget http://rubyforge.org/frs/download.php/69365/rubygems-1.3.6.tgz
+$ wget http://rubyforge.org/frs/download.php/69365/\
+rubygems-1.3.6.tgz
 $ tar xfv rubygems-1.3.6.tgz
 $ cd rubygems-1.3.6
 $ ruby setup.rb
+$ gem -v
+1.3.6
 <% end -%>
 
 h3. Install rails
@@ -127,17 +134,27 @@ $ rails -v
 
 h3. Install sqlite3
 
-@gem install sqlite3-ruby --platform x86-mswin32@
+@$ gem install sqlite3-ruby --platform x86-mswin32@
 
 h3. Make a Sites folder
 
-Create a folder to keep all your rails apps in, in the _C:/cygwin/rubyGems_ folder called _Sites_
+p(sidenote). Somewhere to keep your rails applications
+
+<% coderay(:lang => "bash") do -%>
+$ cd ~
+$ mkdir Sites
+$ cd Sites
+$ rails testapp
+<% end -%>
+
 
 h3. Text Editor
 
+p(sidenote). We recommend using E&nbsp;Text Editor
+
 This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
 
-p(sidenote). We recommend using E&nbsp;Text Editor
+p(sidenote). A great shortcut when using E Text Editor is to type @e .@ in console when you want to open the current folder
 
 * "E Text Editor":http://www.e-texteditor.com/ - free for 30 days; supports textmate bundles
 * "Notepad++":http://notepad-plus.sourceforge.net/uk/site.htm free; fast and light.
@@ -145,15 +162,18 @@ p(sidenote). We recommend using E&nbsp;Text Editor
 * "RadRails":http://www.radrails.org/ - free; full ruby on rails development environment
 * "Vim":http://www.vim.org/ - free; the legend of command-line editors
 
-h3. Screensharing
+h3. Screen Sharing
 
 Instructors will teach by showing your own computer on the communal projector. How? Via screen sharing.
 
-To set up screensharing head over to the "TightVNC":http://www.tightvnc.com website and download the 2.0 Beta 1 and install, when it asks you for a _Primary password_ set it to _'mocra'_. You will need to keep this app running during the Mocra Ruby on Rails training course.
+To set up screen sharing head over to the "TightVNC":http://www.tightvnc.com website and download the 2.0 Beta 1 and install, when it asks you for a _Primary password_ set it to _'mocra'_. You will need to keep this app running during the Mocra Ruby on Rails training course.
 
+<hr/>
 <a name="linux"></a>
 
 h2. Linux (Ubuntu)
+
+The following steps are a shortened version of a document that can be found at  "https://help.ubuntu.com/community/RubyOnRails":https://help.ubuntu.com/community/RubyOnRails
 
 h3. Get Ruby
 
@@ -169,13 +189,10 @@ h3. Install Ruby Gems
 
 <% coderay(:lang => "bash") do -%>
 $ sudo apt-get install rubygems
+$ export PATH=/var/lib/gems/1.8/bin:$PATH
 $ gem -v
 1.3.5
 <% end -%>
-
-To make gem work properly write gem's path to PATH add to ~/.bashrc:
-
-@export PATH=/var/lib/gems/1.8/bin:$PATH@
 
 h3. Install Rails
 
@@ -192,19 +209,20 @@ $ sudo apt-get install libsqlite3-dev
 $ sudo gem install sqlite3-ruby
 <% end -%>
 
-This tutorial can be found in full over at "help.ubuntu.com/community/RubyOnRails":https://help.ubuntu.com/community/RubyOnRails
 
 h3. Text Editor
 
 This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
 
+p(sidenote). rails.vim is the one true _Vim_ plugin for Ruby on Rails "http://rails.vim.tpope.net/":http://rails.vim.tpope.net/
+
 * "_Scribes_":http://scribes.sourceforge.net/ - free; Simple, slim and sleek, yet powerful
 * "RadRails":http://www.radrails.org/ - free; full ruby on rails development environment
 * "Vim":http://www.vim.org/ - free; the legend of terminal editors
 
-h3. Screensharing
+h3. Screen Sharing
 
-To set up screensharing head over to the "TightVNC":http://www.tightvnc.com website and download and install, when it asks you for a _Primary password_ set it to _'mocra'_. You will need to keep this app running during the Mocra Ruby on Rails training course.
+To set up screen sharing head over to the "TightVNC":http://www.tightvnc.com website and download and install, when it asks you for a _Primary password_ set it to _'mocra'_. You will need to keep this app running during the Mocra Ruby on Rails training course.
 
 h2. Whats next?
 

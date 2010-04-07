@@ -15,6 +15,7 @@ q::after{content:"\201D";}
 p{margin:0;margin-bottom:.8em;}
 a{color:black}
 a img{border:none;}
+hr{display:none;}
 
 ol,ul,dl{margin:0;padding:0;padding-left:1.5em;}
 li{margin-bottom:.8em;}
