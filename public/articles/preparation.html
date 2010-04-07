@@ -102,8 +102,8 @@
         <h3>Make a Sites folder</h3>
         <p>Create a folder to keep all your rails apps in, in the <em>C:/cygwin/rubyGems</em> folder called <em>Sites</em></p>
         <h3>Text Editor</h3>
-        <p class="sidenote">We recommend using E&nbsp;Text Editor</p>
         <p>This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.</p>
+        <p class="sidenote">We recommend using E&nbsp;Text Editor</p>
         <ul>
         	<li><a href="http://www.e-texteditor.com/">E Text Editor</a> &#8211; free for 30 days; supports textmate bundles</li>
         	<li><a href="http://notepad-plus.sourceforge.net/uk/site.htm">Notepad++</a> free; fast and light.</li>
@@ -122,8 +122,10 @@
         </div>
         <h3>Install Ruby Gems</h3>
         <div class="CodeRay">
-        <pre>$ sudo apt-get install rubygems&#x000A;# ??????&#x000A;$ gem -v&#x000A;1.3.5</pre>
+        <pre>$ sudo apt-get install rubygems&#x000A;$ gem -v&#x000A;1.3.5</pre>
         </div>
+        <p>To make gem work properly write gem&#8217;s path to PATH add to ~/.bashrc:</p>
+        <p><code>export PATH=/var/lib/gems/1.8/bin:$PATH</code></p>
         <h3>Install Rails</h3>
         <div class="CodeRay">
         <pre>$ sudo gem install rails&#x000A;$ rails -v&#x000A;2.3.5</pre>

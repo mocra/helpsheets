@@ -135,9 +135,9 @@ Create a folder to keep all your rails apps in, in the _C:/cygwin/rubyGems_ fold
 
 h3. Text Editor
 
-p(sidenote). We recommend using E&nbsp;Text Editor
-
 This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.
+
+p(sidenote). We recommend using E&nbsp;Text Editor
 
 * "E Text Editor":http://www.e-texteditor.com/ - free for 30 days; supports textmate bundles
 * "Notepad++":http://notepad-plus.sourceforge.net/uk/site.htm free; fast and light.
@@ -169,10 +169,13 @@ h3. Install Ruby Gems
 
 <% coderay(:lang => "bash") do -%>
 $ sudo apt-get install rubygems
-# ??????
 $ gem -v
 1.3.5
 <% end -%>
+
+To make gem work properly write gem's path to PATH add to ~/.bashrc:
+
+@export PATH=/var/lib/gems/1.8/bin:$PATH@
 
 h3. Install Rails
 
