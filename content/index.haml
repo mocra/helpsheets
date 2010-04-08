@@ -5,13 +5,16 @@ filter: haml
 
 
 %h2 What to read before the course
-
 %ul
   - @pages.find(:all, :in_directory => "articles", :category => "preparation").each do |page|
     %li= link_to_page(page)
-
+    
+%h2 Course documentation
+%ul
+  - @pages.find(:all, :in_directory => "articles", :category => "course-documentation").each do |page|
+    %li= link_to_page(page)
+    
 %h2 Basics
-
 %ul
   - @pages.find(:all, :in_directory => "articles", :category => "basics").each do |page|
     %li= link_to_page(page)
