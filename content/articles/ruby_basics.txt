@@ -261,19 +261,19 @@ end
 Test if a block is provided with @block_given?@
 
 <% coderay(:lang => "ruby") do -%>
-  def this_many_times(num)
-    if block_given?
-      num.times do |counter|
-        yield(counter)
-      end
-    else
-      puts "No block passed!"
+def this_many_times(num)
+  if block_given?
+    num.times do |counter|
+      yield(counter)
     end
+  else
+    puts "No block passed!"
   end
-  this_many_times(5) {|i| print i}
-  #=> 01234
-  this_many_times(5)
-  #=> No block passed!
+end
+this_many_times(5) {|i| print i}
+#=> 01234
+this_many_times(5)
+#=> No block passed!
 <% end -%>
 
 

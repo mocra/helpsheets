@@ -121,7 +121,7 @@
         </div>
         <p>Test if a block is provided with <code>block_given?</code></p>
         <div class="CodeRay">
-        <pre>  <span class="r">def</span> <span class="fu">this_many_times</span>(num)&#x000A;    <span class="r">if</span> block_given?&#x000A;      num.times <span class="r">do</span> |counter|&#x000A;        <span class="r">yield</span>(counter)&#x000A;      <span class="r">end</span>&#x000A;    <span class="r">else</span>&#x000A;      puts <span class="s"><span class="dl">&quot;</span><span class="k">No block passed!</span><span class="dl">&quot;</span></span>&#x000A;    <span class="r">end</span>&#x000A;  <span class="r">end</span>&#x000A;  this_many_times(<span class="i">5</span>) {|i| print i}&#x000A;  <span class="c">#=&gt; 01234</span>&#x000A;  this_many_times(<span class="i">5</span>)&#x000A;  <span class="c">#=&gt; No block passed!</span></pre>
+        <pre><span class="r">def</span> <span class="fu">this_many_times</span>(num)&#x000A;  <span class="r">if</span> block_given?&#x000A;    num.times <span class="r">do</span> |counter|&#x000A;      <span class="r">yield</span>(counter)&#x000A;    <span class="r">end</span>&#x000A;  <span class="r">else</span>&#x000A;    puts <span class="s"><span class="dl">&quot;</span><span class="k">No block passed!</span><span class="dl">&quot;</span></span>&#x000A;  <span class="r">end</span>&#x000A;<span class="r">end</span>&#x000A;this_many_times(<span class="i">5</span>) {|i| print i}&#x000A;<span class="c">#=&gt; 01234</span>&#x000A;this_many_times(<span class="i">5</span>)&#x000A;<span class="c">#=&gt; No block passed!</span></pre>
         </div>
         <h2>Got 15 minutes?</h2>
         <h3>Try Ruby in your browser</h3>
