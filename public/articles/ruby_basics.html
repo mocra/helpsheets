@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Mocra Helpsheets
+    </title>
+    <link href="../css/style.css" rel="stylesheet" media="all" />
+    <link href="../css/screen.css" rel="stylesheet" media="screen, projection" />
+    <link href="../css/print.css" rel="stylesheet" media="print" />
+    <link href="../css/coderay.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="footer">
+        <a href="http://mocra.com">
+          <img src="../images/logo.png" />
+        </a>
+        Learn Ruby on Rails Course
+        <div class="page"></div>
+      </div>
+      <div id="header">
+        <h1>
+          Ruby - Basics
+        </h1>
+      </div>
+      <div id="article">
+        <p>To show off the basics of ruby you can jump straight into the ruby console. Do so by opening terminal (or the console2 program we installed earlier if you&#8217;re on a PC) and typing:</p>
+        <p><code>irb</code></p>
+        <h2>Basic Ruby Syntax</h2>
+        <h3>Sub heading</h3>
+        <div class="CodeRay">
+        <pre><span class="r">def</span> <span class="fu">hello_world</span>&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Hello!</span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span>&#x000A;<span class="c">#=&gt; nil</span>&#x000A;hello_world&#x000A;<span class="c">#=&gt; Hello!</span></pre>
+        </div>
+        <h3>Sub heading</h3>
+        <div class="CodeRay">
+        <pre><span class="r">def</span> <span class="fu">hello_world</span>(name)&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Hello </span><span class="il"><span class="idl">#{</span>name<span class="idl">}</span></span><span class="k">!</span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span>&#x000A;<span class="c">#=&gt; nil</span>&#x000A;hello_world(<span class="s"><span class="dl">&quot;</span><span class="k">World</span><span class="dl">&quot;</span></span>)&#x000A;<span class="c">#=&gt; Hello World!</span>&#x000A;<span class="c">#=&gt; nil</span></pre>
+        </div>
+        <h3>Sub heading</h3>
+        <div class="CodeRay">
+        <pre><span class="r">def</span> <span class="fu">hello_world</span>(name = <span class="s"><span class="dl">&quot;</span><span class="k">World</span><span class="dl">&quot;</span></span>)&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Hello </span><span class="il"><span class="idl">#{</span>name.capitalize<span class="idl">}</span></span><span class="k">!</span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span>&#x000A;<span class="c">#=&gt; nil</span>&#x000A;hello_world <span class="s"><span class="dl">&quot;</span><span class="k">odin</span><span class="dl">&quot;</span></span>&#x000A;<span class="c">#=&gt; Hello Odin!</span>&#x000A;<span class="c">#=&gt; nil</span>&#x000A;hello_world&#x000A;<span class="c">#=&gt; Hello World!</span>&#x000A;<span class="c">#=&gt; nil</span></pre>
+        </div>
+        <h3>Sub heading</h3>
+        <div class="CodeRay">
+        <pre><span class="r">class</span> <span class="cl">Greeter</span>&#x000A;  <span class="r">def</span> <span class="fu">initialize</span>(name = <span class="s"><span class="dl">&quot;</span><span class="k">World</span><span class="dl">&quot;</span></span>)&#x000A;    <span class="iv">@name</span> = name&#x000A;  <span class="r">end</span>&#x000A;  <span class="r">def</span> <span class="fu">say_hi</span>&#x000A;    puts <span class="s"><span class="dl">&quot;</span><span class="k">Hi </span><span class="il"><span class="idl">#{</span><span class="iv">@name</span><span class="idl">}</span></span><span class="k">!</span><span class="dl">&quot;</span></span>&#x000A;  <span class="r">end</span>&#x000A;  <span class="r">def</span> <span class="fu">say_bye</span>&#x000A;    puts <span class="s"><span class="dl">&quot;</span><span class="k">Bye </span><span class="il"><span class="idl">#{</span><span class="iv">@name</span><span class="idl">}</span></span><span class="k">, come back soon.</span><span class="dl">&quot;</span></span>&#x000A;  <span class="r">end</span>&#x000A;<span class="r">end</span>&#x000A;<span class="c">#=&gt; nil</span></pre>
+        </div>
+        <h3>Sub heading</h3>
+        <div class="CodeRay">
+        <pre><span class="r">for</span> x <span class="r">in</span> array&#x000A;  put x&#x000A;<span class="r">end</span>&#x000A;</pre>
+        </div>
+        <h3>Try Ruby in your browser</h3>
+        <p>If you want to run through a basic ruby tutorial head over to <a href="http://tryruby.org/">tryruby.org</a> and try out ruby in your web browser!</p>
+      </div>
+    </div>
+  </body>
+</html>

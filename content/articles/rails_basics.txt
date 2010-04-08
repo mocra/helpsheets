@@ -39,7 +39,7 @@ p(sidenote). Windows: 'ls -al' equivalent to 'dir'
 <% coderay(:lang => "bash") do -%>
 $ ls -al scripts/
 $ script/server
-<% end %>
+<% end -%>
 
 h3. Generators
 
@@ -49,6 +49,6 @@ Great way to learn Rails is to use generators.
 $ script/generate
 $ script/generate model Tweet message:string user_id:integer
 $ rake db:migrate
-<% end %>
+<% end -%>
 
 View each generated file to see what is generated!

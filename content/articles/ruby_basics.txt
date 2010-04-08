@@ -1,0 +1,81 @@
+---
+title:  Ruby - Basics
+filter:
+  - erb
+  - textile
+---
+
+To show off the basics of ruby you can jump straight into the ruby console. Do so by opening terminal (or the console2 program we installed earlier if you're on a PC) and typing:
+
+@irb@
+
+h2. Basic Ruby Syntax
+
+h3. Sub heading
+
+<% coderay(:lang => "ruby") do -%>
+def hello_world
+  puts "Hello!"
+end
+#=> nil
+hello_world
+#=> Hello!
+<% end -%>
+
+h3. Sub heading
+
+<% coderay(:lang => "ruby") do -%>
+def hello_world(name)
+  puts "Hello #{name}!"
+end
+#=> nil
+hello_world("World")
+#=> Hello World!
+#=> nil
+<% end -%>
+
+h3. Sub heading
+
+<% coderay(:lang => "ruby") do -%>
+def hello_world(name = "World")
+  puts "Hello #{name.capitalize}!"
+end
+#=> nil
+hello_world "odin"
+#=> Hello Odin!
+#=> nil
+hello_world
+#=> Hello World!
+#=> nil
+<% end -%>
+
+h3. Sub heading
+
+<% coderay(:lang => "ruby") do -%>
+class Greeter
+  def initialize(name = "World")
+    @name = name
+  end
+  def say_hi
+    puts "Hi #{@name}!"
+  end
+  def say_bye
+    puts "Bye #{@name}, come back soon."
+  end
+end
+#=> nil
+<% end -%>
+
+h3. Sub heading
+
+<% coderay(:lang => "ruby") do -%>
+for x in array
+  put x
+end
+
+<% end -%>
+
+
+h3. Try Ruby in your browser
+
+If you want to run through a basic ruby tutorial head over to "tryruby.org":http://tryruby.org/ and try out ruby in your web browser!
