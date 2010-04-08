@@ -9,8 +9,6 @@ filter:
 
 p(sidenote). Interactive Ruby Shell
 
-p(sidenote). Constants should be be Capitalized_with underscores
-
 To show off the basics of ruby you can jump straight into the ruby console. Do so by opening terminal (or the console2 program we installed earlier if you're on a PC) and typing:
 
 @irb@
@@ -21,17 +19,24 @@ h2. Methods
 
 h3. Without arguments
 
+p(sidenote). Parenthesis are often optional.
+
 <% coderay(:lang => "ruby") do -%>
 def hello_world
-  puts "Hello!"
+  print "Hello "
+  puts("World!")
 end
 hello_world
-#=> Hello!
+#=> Hello World!
+hello_world()
+#=> Hello World!
 <% end -%>
+
+@print@ and @puts@ are similar - the latter adds an new-line character.
 
 h3. With arguments
 
-p(sidenote). Varibles and methods must use lowercase and_underscores
+p(sidenote). Use lowercase_and_underscores for variables and methods.
 
 <% coderay(:lang => "ruby") do -%>
 def hello_world(name)
@@ -43,8 +48,6 @@ hello_world("World")
 
 h3. With default arguments
 
-p(sidenote). If in doubt, use parenthesis
-
 <% coderay(:lang => "ruby") do -%>
 def hello_world(name = "World")
   puts "Hello #{name.capitalize}!"
@@ -55,9 +58,10 @@ hello_world
 #=> Hello World!
 <% end -%>
 
+
 h2. Classes
 
-h3. Sub heading
+h3. Class definition
 
 p(sidenote). Class names must be in CamelCase
 
@@ -75,7 +79,7 @@ class GreetWorld
 end
 <% end -%>
 
-h3. Sub heading
+h3. Creating objects (Instantiation)
 
 <% coderay(:lang => "ruby") do -%>
 g = Greeter.new("Pat")
@@ -86,58 +90,112 @@ g.say_bye
 #=>Bye Pat, come back soon.
 <% end -%>
 
-h3. Sub heading
 
-<% coderay(:lang => "ruby") do -%>
-for "Odin Dutton" in ["Dr Nic", "Jack Chen",\ 
-"Odin Dutton"]
-  put "Awesome!"
-end
-<% end -%>
-
-
-h2. If, Else
-
-h3. If statement
+h2. if, elsif, else statement
 
 p(sidenote). These logic statements are very similar in most programming languages
 
 <% coderay(:lang => "ruby") do -%>
-if Mocra == "awesome"
-   print "Mocra is awesome!"
-end
-<% end -%>
-
-h3. If Else statement
-
-<% coderay(:lang => "ruby") do -%>
-if Mocra == "awesome"
-   print "Mocra is awesome!"
+rails = "good"
+if rails == "awesome"
+  print "Rails is awesome!"
+elsif rails == "really awesome!"
+  print "Rails is really awesome!"
 else
-   print "Mocra isn't awesome"
+  print "Rails isn't awesome"
 end
 <% end -%>
 
-h3. If Else If statement
+h2. Strings
+
+
+h3. Instant array of strings
 
 <% coderay(:lang => "ruby") do -%>
-if Mocra == "awesome"
-   print "Mocra is awesome!"
-elsif Mocra == "really awesome!"
-   print "Mocra is really awesome!"
-else
-   print "Mocra isn't awesome"
-end
+p %w[ Bob Jim Joe ]
+#=> ["Bob", "Jim", "Joe"]
 <% end -%>
 
-h3. Shortened Syntax
+h3. Types of strings
+
+p(sidenote). Interpolation is wonderful.
+
+@'single quote'@ and @"double quote"@ are both normal strings. Double quotes allow interpolation of arbitrary ruby within the string:
 
 <% coderay(:lang => "ruby") do -%>
-print "Mocra is " + (Mocra == "awesome" ? \
-"awesome" : "n't awesome")
+quote = "This is a quote"
+puts 'single quote: #{quote}'
+#=> 'single quote: #{quote}'
+puts "double quote: #{quote}"
+#=> double quote: This is a quote
+
+puts "1 + 1 = #{1 + 1}"
+#=> 1 + 1 = 2
+<% end -%>
+
+h3. Multi-line strings
+
+Want a block of text?
+
+<% coderay(:lang => "ruby") do -%>
+puts <<-STRING
+This is a mulit-
+  line string.
+STRING
+#=> This is a mulit-
+#=>   line string.
+<% end -%>
+
+The @STRING@ can be anything but must be the same at start and end.
+
+h2. Regular expressions
+
+A language within a language, regular expressions are powerful for processing text.
+
+You can use @(groups)@ and they are populated into @$1@, @$2@, etc variables.
+
+<% coderay(:lang => "ruby") do -%>
+time_str = Time.now.to_s
+puts time_str
+#=> Thu Apr 08 16:05:34 +1000 2010
+if time_str =~ /(\d+):(\d+):(\d+)/
+  p [$1, $2, $3]
+end
+#=> ["16", "08", "45"]
+<% end -%>
+
+h3. Replacement with gsub
+
+<% coderay(:lang => "ruby") do -%>
+"I am a happy man in a can!".gsub(/an/, 'aaaaan')
+#=> "I am a happy maaaaan in a caaaaan!"
+<% end -%>
+
+h3. Ternary operator
+
+<% coderay(:lang => "ruby") do -%>
+time_str = Time.now.to_s
+(time_str =~ /Mon/) ? "I hate Monday!" : "Great!"
+#=> Great!
+<% end -%>
+
+h2. Loops
+
+<% coderay(:lang => "ruby") do -%>
+for person in ["Dr Nic", "Jack", "Odin"]
+  puts person
+end
+
+count = 5
+while count > 0
+  count -= 1
+  puts count
+end
 <% end -%>
 
 h2. Blocks
+
+Pass some code when calling a method.
 
 <% coderay(:lang => "ruby") do -%>
 5.times do
@@ -145,55 +203,77 @@ h2. Blocks
 end
 <% end -%>
 
-h3. Bbbbblocks
+Your block of code can have arguments.
 
 <% coderay(:lang => "ruby") do -%>
-array = [
-  "Bob",
-  "Jim",
-  "Joe"
-]
+0.upto(5) do |i|
+  puts i
+end
 
-array.each do|name|
-  puts name
+5.times do |i|
+  puts "Blocks are powerful x #{i}"
 end
 <% end -%>
 
-h3. More blocks
+h3. Better loops
 
 <% coderay(:lang => "ruby") do -%>
-def this_many_times(num)
-  counter = 0
-  while counter < num
-    yield
-    counter += 1
-  end
-end
-
-this_many_times(5) do
-  puts "Blocks are powerful"
+%w[ Bob Jim Joe ].each do |name|
+  puts name
 end
 <% end -%>
 
 h3. Blocks with { }
 
-Here is some code using the @block_given?@ *class method???* to see wether a block has been passed. The code will run within the method at _yield_.
+@{ ... }@ and @do ...  end@ are interchangeable.
+
+p(sidenote). Typically, use the former for 1-liners.
 
 <% coderay(:lang => "ruby") do -%>
-def aliens
-if block_given?
-  i = "John the alien"
-  j = "Smith the alien"
-  yield(i, j)
- else puts "No block defined"
- end
+0.times(5) { |i| puts i }
+
+0.times(5) do |i|
+  puts i
 end
-aliens { |x, y| puts x }
-#=> John the alien
-aliens { |x, y| puts y }
-#=> Smith the alien
-aliens
-#=> No block defined
+<% end -%>
+
+
+h3. Methods accepting blocks
+
+The @yield@ method invokes any block passed to the method; pass arguments as necessary.
+
+<% coderay(:lang => "ruby") do -%>
+def this_many_times(num)
+  num.times do |counter|
+    yield(counter)
+  end
+end
+
+this_many_times(3) do |i|
+  puts "Block called # #{i}"
+end
+#=> Block called # 0
+#=> Block called # 1
+#=> Block called # 2
+<% end -%>
+
+
+Test if a block is provided with @block_given?@
+
+<% coderay(:lang => "ruby") do -%>
+  def this_many_times(num)
+    if block_given?
+      num.times do |counter|
+        yield(counter)
+      end
+    else
+      puts "No block passed!"
+    end
+  end
+  this_many_times(5) {|i| print i}
+  #=> 01234
+  this_many_times(5)
+  #=> No block passed!
 <% end -%>
 
 
