@@ -5,9 +5,14 @@ filter:
   - textile
 ---
 
+
+p(sidenote). Interactive Ruby Shell
+
 To show off the basics of ruby you can jump straight into the ruby console. Do so by opening terminal (or the console2 program we installed earlier if you're on a PC) and typing:
 
 @irb@
+
+You can then run ruby code right in terminal (or console2). You can copy in multiple lines at a time, try out some of the examples below.
 
 h2. Methods
 
