@@ -1,5 +1,6 @@
 ---
 title:       How to deploy your rails app
+category: basics
 filter:
   - erb
   - textile

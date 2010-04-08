@@ -1,5 +1,6 @@
 ---
 title:  Ruby - Basics
+category: basics
 filter:
   - erb
   - textile
@@ -7,6 +8,8 @@ filter:
 
 
 p(sidenote). Interactive Ruby Shell
+
+p(sidenote). Constants should be be Capitalized_with underscores
 
 To show off the basics of ruby you can jump straight into the ruby console. Do so by opening terminal (or the console2 program we installed earlier if you're on a PC) and typing:
 
@@ -28,6 +31,8 @@ hello_world
 
 h3. With arguments
 
+p(sidenote). Varibles and methods must use lowercase and_underscores
+
 <% coderay(:lang => "ruby") do -%>
 def hello_world(name)
   puts "Hello #{name}!"
@@ -37,6 +42,8 @@ hello_world("World")
 <% end -%>
 
 h3. With default arguments
+
+p(sidenote). If in doubt, use parenthesis
 
 <% coderay(:lang => "ruby") do -%>
 def hello_world(name = "World")
@@ -52,8 +59,10 @@ h2. Classes
 
 h3. Sub heading
 
+p(sidenote). Class names must be in CamelCase
+
 <% coderay(:lang => "ruby") do -%>
-class Greet_world
+class GreetWorld
   def initialize(name = "World")
     @name = name
   end
