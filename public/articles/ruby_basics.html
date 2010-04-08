@@ -25,25 +25,45 @@
         </h1>
       </div>
       <div id="article">
-        <p class="sidenote">Interactive Ruby Shell</p>
-        <p>To show off the basics of ruby you can jump straight into the ruby console. Do so by opening terminal (or the console2 program we installed earlier if you&#8217;re on a PC) and typing:</p>
-        <p><code>irb</code></p>
+        <h2>Running ruby examples</h2>
+        <h3>Interactive Ruby Shell</h3>
         <p>You can then run ruby code right in terminal (or console2). You can copy in multiple lines at a time, try out some of the examples below.</p>
+        <div class="CodeRay">
+        <pre>$ irb&#x000A;&gt;&gt; 1 + 1&#x000A;=&gt; 2</pre>
+        </div>
+        <h3>TextMate</h3>
+        <p>Within a Ruby text file you can execute ruby.</p>
+        <ul>
+        	<li>Create a new file</li>
+        	<li>Change to &#8216;Ruby&#8217; language (<em>Shift+Ctrl+Alt+R</em>, select Ruby)</li>
+        	<li>Enter the example below</li>
+        </ul>
+        <p class="sidenote cheat">Cheat! Type <code>#</code> and press tab.</p>
+        <div class="CodeRay">
+        <pre><span class="i">1</span> + <span class="i">1</span> <span class="c"># =&gt;</span></pre>
+        </div>
+        <ul>
+        	<li>Press <em>Ctrl+Cmd+E</em> to execute the Ruby</li>
+        </ul>
+        <div class="CodeRay">
+        <pre><span class="i">1</span> + <span class="i">1</span> <span class="c"># =&gt; 2</span></pre>
+        </div>
+        <p>Alternately, press <em>Cmd+R</em> to run the whole file and print the output to another window.</p>
         <h2>Methods</h2>
         <h3>Without arguments</h3>
         <p class="sidenote">Parenthesis are often optional.</p>
         <div class="CodeRay">
-        <pre><span class="r">def</span> <span class="fu">hello_world</span>&#x000A;  print <span class="s"><span class="dl">&quot;</span><span class="k">Hello </span><span class="dl">&quot;</span></span>&#x000A;  puts(<span class="s"><span class="dl">&quot;</span><span class="k">World!</span><span class="dl">&quot;</span></span>)&#x000A;<span class="r">end</span>&#x000A;hello_world&#x000A;<span class="c">#=&gt; Hello World!</span>&#x000A;hello_world()&#x000A;<span class="c">#=&gt; Hello World!</span></pre>
+        <pre><span class="r">def</span> <span class="fu">hello_world</span>&#x000A;  print <span class="s"><span class="dl">&quot;</span><span class="k">Hello </span><span class="dl">&quot;</span></span>&#x000A;  puts(<span class="s"><span class="dl">&quot;</span><span class="k">World!</span><span class="dl">&quot;</span></span>)&#x000A;<span class="r">end</span>&#x000A;hello_world&#x000A;<span class="c"># =&gt; Hello World!</span>&#x000A;hello_world()&#x000A;<span class="c"># =&gt; Hello World!</span></pre>
         </div>
         <p><code>print</code> and <code>puts</code> are similar &#8211; the latter adds an new-line character.</p>
         <h3>With arguments</h3>
         <p class="sidenote">Use lowercase_and_underscores for variables and methods.</p>
         <div class="CodeRay">
-        <pre><span class="r">def</span> <span class="fu">hello_world</span>(name)&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Hello </span><span class="il"><span class="idl">#{</span>name<span class="idl">}</span></span><span class="k">!</span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span>&#x000A;hello_world(<span class="s"><span class="dl">&quot;</span><span class="k">World</span><span class="dl">&quot;</span></span>)&#x000A;<span class="c">#=&gt; Hello World!</span></pre>
+        <pre><span class="r">def</span> <span class="fu">hello_world</span>(name)&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Hello </span><span class="il"><span class="idl">#{</span>name<span class="idl">}</span></span><span class="k">!</span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span>&#x000A;hello_world(<span class="s"><span class="dl">&quot;</span><span class="k">World</span><span class="dl">&quot;</span></span>)&#x000A;<span class="c"># =&gt; Hello World!</span></pre>
         </div>
         <h3>With default arguments</h3>
         <div class="CodeRay">
-        <pre><span class="r">def</span> <span class="fu">hello_world</span>(name = <span class="s"><span class="dl">&quot;</span><span class="k">World</span><span class="dl">&quot;</span></span>)&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Hello </span><span class="il"><span class="idl">#{</span>name.capitalize<span class="idl">}</span></span><span class="k">!</span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span>&#x000A;hello_world <span class="s"><span class="dl">&quot;</span><span class="k">odin</span><span class="dl">&quot;</span></span>&#x000A;<span class="c">#=&gt; Hello Odin!</span>&#x000A;hello_world&#x000A;<span class="c">#=&gt; Hello World!</span></pre>
+        <pre><span class="r">def</span> <span class="fu">hello_world</span>(name = <span class="s"><span class="dl">&quot;</span><span class="k">World</span><span class="dl">&quot;</span></span>)&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Hello </span><span class="il"><span class="idl">#{</span>name.capitalize<span class="idl">}</span></span><span class="k">!</span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span>&#x000A;hello_world <span class="s"><span class="dl">&quot;</span><span class="k">odin</span><span class="dl">&quot;</span></span>&#x000A;<span class="c"># =&gt; Hello Odin!</span>&#x000A;hello_world&#x000A;<span class="c"># =&gt; Hello World!</span></pre>
         </div>
         <h2>Classes</h2>
         <h3>Class definition</h3>
@@ -53,12 +73,12 @@
         </div>
         <h3>Creating objects (Instantiation)</h3>
         <div class="CodeRay">
-        <pre>g = <span class="co">Greeter</span>.new(<span class="s"><span class="dl">&quot;</span><span class="k">Pat</span><span class="dl">&quot;</span></span>)&#x000A;<span class="c">#=&gt; #&lt;Greeter:0x16cac @name=&quot;Pat&quot;&gt;</span>&#x000A;g.say_hi&#x000A;<span class="c">#=&gt;Hi Pat!</span>&#x000A;g.say_bye&#x000A;<span class="c">#=&gt;Bye Pat, come back soon.</span></pre>
+        <pre>g = <span class="co">Greeter</span>.new(<span class="s"><span class="dl">&quot;</span><span class="k">Pat</span><span class="dl">&quot;</span></span>)&#x000A;<span class="c"># =&gt; #&lt;Greeter:0x16cac @name=&quot;Pat&quot;&gt;</span>&#x000A;g.say_hi&#x000A;<span class="c"># =&gt;Hi Pat!</span>&#x000A;g.say_bye&#x000A;<span class="c"># =&gt;Bye Pat, come back soon.</span></pre>
         </div>
         <h3>Constants</h3>
         <p class="sidenote">Constants are in UPPER_CASE</p>
         <div class="CodeRay">
-        <pre><span class="co">FOO_BAR</span> = <span class="i">1</span>&#x000A;<span class="c">#=&gt; 1</span>&#x000A;<span class="co">FOO_BAR</span> = <span class="i">2</span>&#x000A;<span class="c">#=&gt; warning: already initialized constant FOO</span></pre>
+        <pre><span class="co">FOO_BAR</span> = <span class="i">1</span>&#x000A;<span class="c"># =&gt; 1</span>&#x000A;<span class="co">FOO_BAR</span> = <span class="i">2</span>&#x000A;<span class="c"># =&gt; warning: already initialized constant FOO_BAR</span></pre>
         </div>
         <h3>Constants and Classes</h3>
         <p>Above, class <code>GreetWorld</code> is a constant just like <code>FOO_BAR</code>. Any &#8220;variable&#8221; starting with an uppercase letter is a constant, anything starting with a lowercase letter is a variable.</p>
@@ -71,33 +91,33 @@
         <h2>Strings</h2>
         <h3>Instant array of strings</h3>
         <div class="CodeRay">
-        <pre>p <span class="s"><span class="dl">%w[</span><span class="k"> Bob Jim Joe </span><span class="dl">]</span></span>&#x000A;<span class="c">#=&gt; [&quot;Bob&quot;, &quot;Jim&quot;, &quot;Joe&quot;]</span></pre>
+        <pre>p <span class="s"><span class="dl">%w[</span><span class="k"> Bob Jim Joe </span><span class="dl">]</span></span>&#x000A;<span class="c"># =&gt; [&quot;Bob&quot;, &quot;Jim&quot;, &quot;Joe&quot;]</span></pre>
         </div>
         <h3>Types of strings</h3>
         <p class="sidenote">Interpolation is wonderful.</p>
         <p><code>'single quote'</code> and <code>"double quote"</code> are both normal strings. Double quotes allow interpolation of arbitrary ruby within the string:</p>
         <div class="CodeRay">
-        <pre>quote = <span class="s"><span class="dl">&quot;</span><span class="k">This is a quote</span><span class="dl">&quot;</span></span>&#x000A;puts <span class="s"><span class="dl">'</span><span class="k">single quote: #{quote}</span><span class="dl">'</span></span>&#x000A;<span class="c">#=&gt; 'single quote: #{quote}'</span>&#x000A;puts <span class="s"><span class="dl">&quot;</span><span class="k">double quote: </span><span class="il"><span class="idl">#{</span>quote<span class="idl">}</span></span><span class="dl">&quot;</span></span>&#x000A;<span class="c">#=&gt; double quote: This is a quote</span>&#x000A;&#x000A;puts <span class="s"><span class="dl">&quot;</span><span class="k">1 + 1 = </span><span class="il"><span class="idl">#{</span><span class="i">1</span> + <span class="i">1</span><span class="idl">}</span></span><span class="dl">&quot;</span></span>&#x000A;<span class="c">#=&gt; 1 + 1 = 2</span></pre>
+        <pre>quote = <span class="s"><span class="dl">&quot;</span><span class="k">This is a quote</span><span class="dl">&quot;</span></span>&#x000A;puts <span class="s"><span class="dl">'</span><span class="k">single quote: #{quote}</span><span class="dl">'</span></span>&#x000A;<span class="c"># =&gt; 'single quote: #{quote}'</span>&#x000A;puts <span class="s"><span class="dl">&quot;</span><span class="k">double quote: </span><span class="il"><span class="idl">#{</span>quote<span class="idl">}</span></span><span class="dl">&quot;</span></span>&#x000A;<span class="c"># =&gt; double quote: This is a quote</span>&#x000A;&#x000A;puts <span class="s"><span class="dl">&quot;</span><span class="k">1 + 1 = </span><span class="il"><span class="idl">#{</span><span class="i">1</span> + <span class="i">1</span><span class="idl">}</span></span><span class="dl">&quot;</span></span>&#x000A;<span class="c"># =&gt; 1 + 1 = 2</span></pre>
         </div>
         <h3>Multi-line strings</h3>
         <p>Want a block of text?</p>
         <div class="CodeRay">
-        <pre>puts <span class="s"><span class="dl">&lt;&lt;-STRING</span></span><span class="s"><span class="k">&#x000A;This is a mulit-&#x000A;  line string.</span><span class="dl">&#x000A;STRING</span></span>&#x000A;<span class="c">#=&gt; This is a mulit-</span>&#x000A;<span class="c">#=&gt;   line string.</span></pre>
+        <pre>puts <span class="s"><span class="dl">&lt;&lt;-STRING</span></span><span class="s"><span class="k">&#x000A;This is a mulit-&#x000A;  line string.</span><span class="dl">&#x000A;STRING</span></span>&#x000A;<span class="c"># =&gt; This is a mulit-</span>&#x000A;<span class="c"># =&gt;   line string.</span></pre>
         </div>
         <p>The <code>STRING</code> can be anything but must be the same at start and end.</p>
         <h2>Regular expressions</h2>
         <p>A language within a language, regular expressions are powerful for processing text.</p>
         <p>You can use <code>(groups)</code> and they are populated into <code>$1</code>, <code>$2</code>, etc variables.</p>
         <div class="CodeRay">
-        <pre>time_str = <span class="co">Time</span>.now.to_s&#x000A;puts time_str&#x000A;<span class="c">#=&gt; Thu Apr 08 16:05:34 +1000 2010</span>&#x000A;<span class="r">if</span> time_str =~ <span class="rx"><span class="dl">/</span><span class="k">(</span><span class="ch">\d</span><span class="k">+):(</span><span class="ch">\d</span><span class="k">+):(</span><span class="ch">\d</span><span class="k">+)</span><span class="dl">/</span></span>&#x000A;  p [<span class="gv">$1</span>, <span class="gv">$2</span>, <span class="gv">$3</span>]&#x000A;<span class="r">end</span>&#x000A;<span class="c">#=&gt; [&quot;16&quot;, &quot;08&quot;, &quot;45&quot;]</span></pre>
+        <pre>time_str = <span class="co">Time</span>.now.to_s&#x000A;puts time_str&#x000A;<span class="c"># =&gt; Thu Apr 08 16:05:34 +1000 2010</span>&#x000A;<span class="r">if</span> time_str =~ <span class="rx"><span class="dl">/</span><span class="k">(</span><span class="ch">\d</span><span class="k">+):(</span><span class="ch">\d</span><span class="k">+):(</span><span class="ch">\d</span><span class="k">+)</span><span class="dl">/</span></span>&#x000A;  p [<span class="gv">$1</span>, <span class="gv">$2</span>, <span class="gv">$3</span>]&#x000A;<span class="r">end</span>&#x000A;<span class="c"># =&gt; [&quot;16&quot;, &quot;08&quot;, &quot;45&quot;]</span></pre>
         </div>
         <h3>Replacement with gsub</h3>
         <div class="CodeRay">
-        <pre><span class="s"><span class="dl">&quot;</span><span class="k">I am a happy man in a can!</span><span class="dl">&quot;</span></span>.gsub(<span class="rx"><span class="dl">/</span><span class="k">an</span><span class="dl">/</span></span>, <span class="s"><span class="dl">'</span><span class="k">aaaaan</span><span class="dl">'</span></span>)&#x000A;<span class="c">#=&gt; &quot;I am a happy maaaaan in a caaaaan!&quot;</span></pre>
+        <pre><span class="s"><span class="dl">&quot;</span><span class="k">I am a happy man in a can!</span><span class="dl">&quot;</span></span>.gsub(<span class="rx"><span class="dl">/</span><span class="k">an</span><span class="dl">/</span></span>, <span class="s"><span class="dl">'</span><span class="k">aaaaan</span><span class="dl">'</span></span>)&#x000A;<span class="c"># =&gt; &quot;I am a happy maaaaan in a caaaaan!&quot;</span></pre>
         </div>
         <h3>Ternary operator</h3>
         <div class="CodeRay">
-        <pre>time_str = <span class="co">Time</span>.now.to_s&#x000A;(time_str =~ <span class="rx"><span class="dl">/</span><span class="k">Mon</span><span class="dl">/</span></span>) ? <span class="s"><span class="dl">&quot;</span><span class="k">I hate Monday!</span><span class="dl">&quot;</span></span> : <span class="s"><span class="dl">&quot;</span><span class="k">Great!</span><span class="dl">&quot;</span></span>&#x000A;<span class="c">#=&gt; Great!</span></pre>
+        <pre>time_str = <span class="co">Time</span>.now.to_s&#x000A;(time_str =~ <span class="rx"><span class="dl">/</span><span class="k">Mon</span><span class="dl">/</span></span>) ? <span class="s"><span class="dl">&quot;</span><span class="k">I hate Monday!</span><span class="dl">&quot;</span></span> : <span class="s"><span class="dl">&quot;</span><span class="k">Great!</span><span class="dl">&quot;</span></span>&#x000A;<span class="c"># =&gt; Great!</span></pre>
         </div>
         <h2>Loops</h2>
         <div class="CodeRay">
@@ -125,11 +145,11 @@
         <h3>Methods accepting blocks</h3>
         <p>The <code>yield</code> method invokes any block passed to the method; pass arguments as necessary.</p>
         <div class="CodeRay">
-        <pre><span class="r">def</span> <span class="fu">this_many_times</span>(num)&#x000A;  num.times <span class="r">do</span> |counter|&#x000A;    <span class="r">yield</span>(counter)&#x000A;  <span class="r">end</span>&#x000A;<span class="r">end</span>&#x000A;&#x000A;this_many_times(<span class="i">3</span>) <span class="r">do</span> |i|&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Block called # </span><span class="il"><span class="idl">#{</span>i<span class="idl">}</span></span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span>&#x000A;<span class="c">#=&gt; Block called # 0</span>&#x000A;<span class="c">#=&gt; Block called # 1</span>&#x000A;<span class="c">#=&gt; Block called # 2</span></pre>
+        <pre><span class="r">def</span> <span class="fu">this_many_times</span>(num)&#x000A;  num.times <span class="r">do</span> |counter|&#x000A;    <span class="r">yield</span>(counter)&#x000A;  <span class="r">end</span>&#x000A;<span class="r">end</span>&#x000A;&#x000A;this_many_times(<span class="i">3</span>) <span class="r">do</span> |i|&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Block called # </span><span class="il"><span class="idl">#{</span>i<span class="idl">}</span></span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span>&#x000A;<span class="c"># =&gt; Block called # 0</span>&#x000A;<span class="c"># =&gt; Block called # 1</span>&#x000A;<span class="c"># =&gt; Block called # 2</span></pre>
         </div>
         <p>Test if a block is provided with <code>block_given?</code></p>
         <div class="CodeRay">
-        <pre><span class="r">def</span> <span class="fu">this_many_times</span>(num)&#x000A;  <span class="r">if</span> block_given?&#x000A;    num.times <span class="r">do</span> |counter|&#x000A;      <span class="r">yield</span>(counter)&#x000A;    <span class="r">end</span>&#x000A;  <span class="r">else</span>&#x000A;    puts <span class="s"><span class="dl">&quot;</span><span class="k">No block passed!</span><span class="dl">&quot;</span></span>&#x000A;  <span class="r">end</span>&#x000A;<span class="r">end</span>&#x000A;this_many_times(<span class="i">5</span>) {|i| print i}&#x000A;<span class="c">#=&gt; 01234</span>&#x000A;this_many_times(<span class="i">5</span>)&#x000A;<span class="c">#=&gt; No block passed!</span></pre>
+        <pre><span class="r">def</span> <span class="fu">this_many_times</span>(num)&#x000A;  <span class="r">if</span> block_given?&#x000A;    num.times <span class="r">do</span> |counter|&#x000A;      <span class="r">yield</span>(counter)&#x000A;    <span class="r">end</span>&#x000A;  <span class="r">else</span>&#x000A;    puts <span class="s"><span class="dl">&quot;</span><span class="k">No block passed!</span><span class="dl">&quot;</span></span>&#x000A;  <span class="r">end</span>&#x000A;<span class="r">end</span>&#x000A;this_many_times(<span class="i">5</span>) {|i| print i}&#x000A;<span class="c"># =&gt; 01234</span>&#x000A;this_many_times(<span class="i">5</span>)&#x000A;<span class="c"># =&gt; No block passed!</span></pre>
         </div>
         <h2>Got 15 minutes?</h2>
         <h3>Try Ruby in your browser</h3>

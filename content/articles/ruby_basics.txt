@@ -7,13 +7,39 @@ filter:
 ---
 
 
-p(sidenote). Interactive Ruby Shell
+h2. Running ruby examples
 
-To show off the basics of ruby you can jump straight into the ruby console. Do so by opening terminal (or the console2 program we installed earlier if you're on a PC) and typing:
-
-@irb@
+h3. Interactive Ruby Shell
 
 You can then run ruby code right in terminal (or console2). You can copy in multiple lines at a time, try out some of the examples below.
+
+<% coderay(:lang => "bash") do -%>
+$ irb
+>> 1 + 1
+=> 2
+<% end -%>
+
+h3. TextMate
+
+Within a Ruby text file you can execute ruby.
+
+* Create a new file
+* Change to 'Ruby' language (_Shift+Ctrl+Alt+R_, select Ruby)
+* Enter the example below
+
+p(sidenote cheat). Cheat! Type @#@ and press tab.
+
+<% coderay(:lang => "ruby") do -%>
+1 + 1 # =>
+<% end -%>
+
+* Press _Ctrl+Cmd+E_ to execute the Ruby
+
+<% coderay(:lang => "ruby") do -%>
+1 + 1 # => 2
+<% end -%>
+
+Alternately, press _Cmd+R_ to run the whole file and print the output to another window.
 
 h2. Methods
 
@@ -27,9 +53,9 @@ def hello_world
   puts("World!")
 end
 hello_world
-#=> Hello World!
+# => Hello World!
 hello_world()
-#=> Hello World!
+# => Hello World!
 <% end -%>
 
 @print@ and @puts@ are similar - the latter adds an new-line character.
@@ -43,7 +69,7 @@ def hello_world(name)
   puts "Hello #{name}!"
 end
 hello_world("World")
-#=> Hello World!
+# => Hello World!
 <% end -%>
 
 h3. With default arguments
@@ -53,9 +79,9 @@ def hello_world(name = "World")
   puts "Hello #{name.capitalize}!"
 end
 hello_world "odin"
-#=> Hello Odin!
+# => Hello Odin!
 hello_world
-#=> Hello World!
+# => Hello World!
 <% end -%>
 
 
@@ -83,11 +109,11 @@ h3. Creating objects (Instantiation)
 
 <% coderay(:lang => "ruby") do -%>
 g = Greeter.new("Pat")
-#=> #<Greeter:0x16cac @name="Pat">
+# => #<Greeter:0x16cac @name="Pat">
 g.say_hi
-#=>Hi Pat!
+# =>Hi Pat!
 g.say_bye
-#=>Bye Pat, come back soon.
+# =>Bye Pat, come back soon.
 <% end -%>
 
 h3. Constants
@@ -96,9 +122,9 @@ p(sidenote). Constants are in UPPER_CASE
 
 <% coderay(:lang => "ruby") do -%>
 FOO_BAR = 1
-#=> 1
+# => 1
 FOO_BAR = 2
-#=> warning: already initialized constant FOO
+# => warning: already initialized constant FOO_BAR
 <% end -%>
 
 h3. Constants and Classes
@@ -129,7 +155,7 @@ h3. Instant array of strings
 
 <% coderay(:lang => "ruby") do -%>
 p %w[ Bob Jim Joe ]
-#=> ["Bob", "Jim", "Joe"]
+# => ["Bob", "Jim", "Joe"]
 <% end -%>
 
 h3. Types of strings
@@ -141,12 +167,12 @@ p(sidenote). Interpolation is wonderful.
 <% coderay(:lang => "ruby") do -%>
 quote = "This is a quote"
 puts 'single quote: #{quote}'
-#=> 'single quote: #{quote}'
+# => 'single quote: #{quote}'
 puts "double quote: #{quote}"
-#=> double quote: This is a quote
+# => double quote: This is a quote
 
 puts "1 + 1 = #{1 + 1}"
-#=> 1 + 1 = 2
+# => 1 + 1 = 2
 <% end -%>
 
 h3. Multi-line strings
@@ -158,8 +184,8 @@ puts <<-STRING
 This is a mulit-
   line string.
 STRING
-#=> This is a mulit-
-#=>   line string.
+# => This is a mulit-
+# =>   line string.
 <% end -%>
 
 The @STRING@ can be anything but must be the same at start and end.
@@ -173,18 +199,18 @@ You can use @(groups)@ and they are populated into @$1@, @$2@, etc variables.
 <% coderay(:lang => "ruby") do -%>
 time_str = Time.now.to_s
 puts time_str
-#=> Thu Apr 08 16:05:34 +1000 2010
+# => Thu Apr 08 16:05:34 +1000 2010
 if time_str =~ /(\d+):(\d+):(\d+)/
   p [$1, $2, $3]
 end
-#=> ["16", "08", "45"]
+# => ["16", "08", "45"]
 <% end -%>
 
 h3. Replacement with gsub
 
 <% coderay(:lang => "ruby") do -%>
 "I am a happy man in a can!".gsub(/an/, 'aaaaan')
-#=> "I am a happy maaaaan in a caaaaan!"
+# => "I am a happy maaaaan in a caaaaan!"
 <% end -%>
 
 h3. Ternary operator
@@ -192,7 +218,7 @@ h3. Ternary operator
 <% coderay(:lang => "ruby") do -%>
 time_str = Time.now.to_s
 (time_str =~ /Mon/) ? "I hate Monday!" : "Great!"
-#=> Great!
+# => Great!
 <% end -%>
 
 h2. Loops
@@ -268,9 +294,9 @@ end
 this_many_times(3) do |i|
   puts "Block called # #{i}"
 end
-#=> Block called # 0
-#=> Block called # 1
-#=> Block called # 2
+# => Block called # 0
+# => Block called # 1
+# => Block called # 2
 <% end -%>
 
 
@@ -287,9 +313,9 @@ def this_many_times(num)
   end
 end
 this_many_times(5) {|i| print i}
-#=> 01234
+# => 01234
 this_many_times(5)
-#=> No block passed!
+# => No block passed!
 <% end -%>
 
 
