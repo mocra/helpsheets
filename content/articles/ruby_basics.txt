@@ -9,50 +9,46 @@ To show off the basics of ruby you can jump straight into the ruby console. Do s
 
 @irb@
 
-h2. Basic Ruby Syntax
+h2. Methods
 
-h3. Sub heading
+h3. Without arguments
 
 <% coderay(:lang => "ruby") do -%>
 def hello_world
   puts "Hello!"
 end
-#=> nil
 hello_world
 #=> Hello!
 <% end -%>
 
-h3. Sub heading
+h3. With arguments
 
 <% coderay(:lang => "ruby") do -%>
 def hello_world(name)
   puts "Hello #{name}!"
 end
-#=> nil
 hello_world("World")
 #=> Hello World!
-#=> nil
 <% end -%>
 
-h3. Sub heading
+h3. With default arguments
 
 <% coderay(:lang => "ruby") do -%>
 def hello_world(name = "World")
   puts "Hello #{name.capitalize}!"
 end
-#=> nil
 hello_world "odin"
 #=> Hello Odin!
-#=> nil
 hello_world
 #=> Hello World!
-#=> nil
 <% end -%>
+
+h2. Classes
 
 h3. Sub heading
 
 <% coderay(:lang => "ruby") do -%>
-class Greeter
+class Greet_world
   def initialize(name = "World")
     @name = name
   end
@@ -63,18 +59,109 @@ class Greeter
     puts "Bye #{@name}, come back soon."
   end
 end
-#=> nil
 <% end -%>
 
 h3. Sub heading
 
 <% coderay(:lang => "ruby") do -%>
-for x in array
-  put x
-end
-
+g = Greeter.new("Pat")
+#=> #<Greeter:0x16cac @name="Pat">
+g.say_hi
+#=>Hi Pat!
+g.say_bye
+#=>Bye Pat, come back soon.
 <% end -%>
 
+h3. Sub heading
+
+<% coderay(:lang => "ruby") do -%>
+for "Odin Dutton" in ["Dr Nic", "Jack Chen",\ 
+"Odin Dutton"]
+  put "Awesome!"
+end
+<% end -%>
+
+
+h2. If, Else
+
+h3. If statement
+
+p(sidenote). These logic statements are very similar in most programming languages
+
+<% coderay(:lang => "ruby") do -%>
+if Mocra == "awesome"
+   print "Mocra is awesome!"
+end
+<% end -%>
+
+h3. If Else statement
+
+<% coderay(:lang => "ruby") do -%>
+if Mocra == "awesome"
+   print "Mocra is awesome!"
+else
+   print "Mocra isn't awesome"
+end
+<% end -%>
+
+h3. If Else If statement
+
+<% coderay(:lang => "ruby") do -%>
+if Mocra == "awesome"
+   print "Mocra is awesome!"
+elsif Mocra == "really awesome!"
+   print "Mocra is really awesome!"
+else
+   print "Mocra isn't awesome"
+end
+<% end -%>
+
+h3. Shortened Syntax
+
+<% coderay(:lang => "ruby") do -%>
+print "Mocra is " + (Mocra == "awesome" ? \
+"awesome" : "n't awesome")
+<% end -%>
+
+h2. Blocks
+
+<% coderay(:lang => "ruby") do -%>
+5.times do
+  puts "Blocks are powerful"
+end
+<% end -%>
+
+h3. Bbbbblocks
+
+<% coderay(:lang => "ruby") do -%>
+array = [
+  "Bob",
+  "Jim",
+  "Joe"
+]
+
+array.each do|name|
+  puts name
+end
+<% end -%>
+
+h3. More blocks
+
+<% coderay(:lang => "ruby") do -%>
+def this_many_times(num)
+  counter = 0
+  while counter < num
+    yield
+    counter += 1
+  end
+end
+
+this_many_times(5) do
+  puts "Blocks are powerful"
+end
+<% end -%>
+
+h2. Got 15 minutes?
 
 h3. Try Ruby in your browser
 
