@@ -175,6 +175,28 @@ this_many_times(5) do
 end
 <% end -%>
 
+h3. Blocks with { }
+
+Here is some code using the @block_given?@ *class method???* to see wether a block has been passed. The code will run within the method at _yield_.
+
+<% coderay(:lang => "ruby") do -%>
+def aliens
+if block_given?
+  i = "John the alien"
+  j = "Smith the alien"
+  yield(i, j)
+ else puts "No block defined"
+ end
+end
+aliens { |x, y| puts x }
+#=> John the alien
+aliens { |x, y| puts y }
+#=> Smith the alien
+aliens
+#=> No block defined
+<% end -%>
+
+
 h2. Got 15 minutes?
 
 h3. Try Ruby in your browser

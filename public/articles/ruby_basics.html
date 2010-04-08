@@ -89,6 +89,11 @@
         <div class="CodeRay">
         <pre><span class="r">def</span> <span class="fu">this_many_times</span>(num)&#x000A;  counter = <span class="i">0</span>&#x000A;  <span class="r">while</span> counter &lt; num&#x000A;    <span class="r">yield</span>&#x000A;    counter += <span class="i">1</span>&#x000A;  <span class="r">end</span>&#x000A;<span class="r">end</span>&#x000A;&#x000A;this_many_times(<span class="i">5</span>) <span class="r">do</span>&#x000A;  puts <span class="s"><span class="dl">&quot;</span><span class="k">Blocks are powerful</span><span class="dl">&quot;</span></span>&#x000A;<span class="r">end</span></pre>
         </div>
+        <h3>Blocks with { }</h3>
+        <p>Here is some code using the <code>block_given?</code> <strong>class method???</strong> to see wether a block has been passed. The code will run within the method at <em>yield</em>.</p>
+        <div class="CodeRay">
+        <pre><span class="r">def</span> <span class="fu">aliens</span>&#x000A;<span class="r">if</span> block_given?&#x000A;  i = <span class="s"><span class="dl">&quot;</span><span class="k">John the alien</span><span class="dl">&quot;</span></span>&#x000A;  j = <span class="s"><span class="dl">&quot;</span><span class="k">Smith the alien</span><span class="dl">&quot;</span></span>&#x000A;  <span class="r">yield</span>(i, j)&#x000A; <span class="r">else</span> puts <span class="s"><span class="dl">&quot;</span><span class="k">No block defined</span><span class="dl">&quot;</span></span>&#x000A; <span class="r">end</span>&#x000A;<span class="r">end</span>&#x000A;aliens { |x, y| puts x }&#x000A;<span class="c">#=&gt; John the alien</span>&#x000A;aliens { |x, y| puts y }&#x000A;<span class="c">#=&gt; Smith the alien</span>&#x000A;aliens&#x000A;<span class="c">#=&gt; No block defined</span></pre>
+        </div>
         <h2>Got 15 minutes?</h2>
         <h3>Try Ruby in your browser</h3>
         <p>If you want to run through a basic ruby tutorial head over to <a href="http://tryruby.org/">tryruby.org</a> and try out ruby in your web browser!</p>
