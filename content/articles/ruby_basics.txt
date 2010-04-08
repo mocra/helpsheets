@@ -90,6 +90,22 @@ g.say_bye
 #=>Bye Pat, come back soon.
 <% end -%>
 
+h3. Constants
+
+p(sidenote). Constants are in UPPER_CASE
+
+<% coderay(:lang => "ruby") do -%>
+FOO_BAR = 1
+#=> 1
+FOO_BAR = 2
+#=> warning: already initialized constant FOO
+<% end -%>
+
+h3. Constants and Classes
+
+Above, class @GreetWorld@ is a constant just like @FOO_BAR@. Any "variable" starting with an uppercase letter is a constant, anything starting with a lowercase letter is a variable.
+
+So for constants and classes we use the convention suggested above: ClassesInCamelCase and CONSTANTS_LIKE_THIS.
 
 h2. if, elsif, else statement
 

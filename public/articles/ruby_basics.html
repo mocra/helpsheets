@@ -55,6 +55,14 @@
         <div class="CodeRay">
         <pre>g = <span class="co">Greeter</span>.new(<span class="s"><span class="dl">&quot;</span><span class="k">Pat</span><span class="dl">&quot;</span></span>)&#x000A;<span class="c">#=&gt; #&lt;Greeter:0x16cac @name=&quot;Pat&quot;&gt;</span>&#x000A;g.say_hi&#x000A;<span class="c">#=&gt;Hi Pat!</span>&#x000A;g.say_bye&#x000A;<span class="c">#=&gt;Bye Pat, come back soon.</span></pre>
         </div>
+        <h3>Constants</h3>
+        <p class="sidenote">Constants are in UPPER_CASE</p>
+        <div class="CodeRay">
+        <pre><span class="co">FOO_BAR</span> = <span class="i">1</span>&#x000A;<span class="c">#=&gt; 1</span>&#x000A;<span class="co">FOO_BAR</span> = <span class="i">2</span>&#x000A;<span class="c">#=&gt; warning: already initialized constant FOO</span></pre>
+        </div>
+        <h3>Constants and Classes</h3>
+        <p>Above, class <code>GreetWorld</code> is a constant just like <code>FOO_BAR</code>. Any &#8220;variable&#8221; starting with an uppercase letter is a constant, anything starting with a lowercase letter is a variable.</p>
+        <p>So for constants and classes we use the convention suggested above: ClassesInCamelCase and CONSTANTS_LIKE_THIS.</p>
         <h2>if, elsif, else statement</h2>
         <p class="sidenote">These logic statements are very similar in most programming languages</p>
         <div class="CodeRay">
