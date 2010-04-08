@@ -1,0 +1,23 @@
+---
+title:       Principles
+category: course-documentation
+filter:
+  - erb
+  - textile
+---
+
+h2. Good programming principles
+
+h3. DRY
+
+Don't repeat yourself.
+
+h3. Convention over Configuration
+
+bq. "Convention over Configuration (also known as Coding by convention) is a software design paradigm which seeks to decrease the number of decisions that developers need to make, gaining simplicity, but not necessarily losing flexibility."
+
+h3. KISS
+
+Keep it simple stupid
+
+<!-- Kylie is super sexy -->

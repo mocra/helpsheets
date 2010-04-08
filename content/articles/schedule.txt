@@ -1,0 +1,73 @@
+---
+title:       Schedule
+category: course-documentation
+filter:
+  - erb
+  - textile
+---
+
+h2. Schedule
+
+h3. Day 1 (10th of April)
+
+p(sidenote). Here is the loose schedule that we will try to stick to during the first weekend. These first 2 days will shape what we do for the remainder of the course.
+
+*Morning*
+* Check installs
+* New app 'drnic twitter'
+* heroku + script/server
+* look + feel (layout/views 'copy twitter')
+* controllers
+* file IO (store and read)
+* ruby
+* partials
+
+*Afternoon*
+* DB + Active Recprd
+* - SQL
+* Console, Logging
+* Scoffold_User
+* Update 'New Tweet'
+* Views & Helpers
+* Sessions, Flashes, Params
+
+h3. Day 2 (11th of April)
+
+*Morning*
+* Cucumber / test / unit
+** existing coverage
+** new feature
+* "follow"/"unfollow"
+* restrict/home
+** namedscopes
+* Associations - hm through
+** routes
+** api /followers
+*** /drnic/followers
+*** /index.rss
+      
+*Afternoon*
+* Resources
+** Tweet
+** Follower
+* Validations (140 Chr)
+* Profile Page
+** Input Types
+* Gravatar (Gem)
+* Gems/Plugins
+
+h3. Day 3 (15th of April)
+
+TBA
+
+h3. Day 4 (22nd of April)
+
+TBA
+
+h3. Day 5 (29th of April)
+
+TBA
+
+h3. Day 6 (6th of May)
+
+TBA
