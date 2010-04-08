@@ -1,0 +1,33 @@
+---
+title:       Course notes
+category: course-documentation
+filter:
+  - erb
+  - textile
+---
+
+h2. Things we will cover
+
+* Git
+* Console/Command Line
+* Editor Intergration
+* Authentication
+* API's
+* Logging
+* Flash Messages
+* Sessions
+* Params
+* Migrations
+* Routes
+* Extensions: Gems/Plugin
+* Github
+* MVC
+* Active Record
+** Basic
+** Associations
+* Erb
+* View Helpers - Forms
+* Errors
+* File Attachment
+* Resources
+* Xss-H, Attr_Accessible, Attr_Param_Logging, Protect from Forgery
