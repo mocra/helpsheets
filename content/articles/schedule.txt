@@ -62,16 +62,20 @@ The schedule for these days will be discussed further on the first weekend
 
 h3. Day 3 (15th of April)
 
-TBA
+* A standup meeting to discuss any problems or issues you have been facing with Ruby on Rails.
+* TBA
 
 h3. Day 4 (22nd of April)
 
-TBA
+* A standup meeting to discuss any problems or issues you have been facing with Ruby on Rails.
+* TBA
 
 h3. Day 5 (29th of April)
 
-TBA
+* A standup meeting to discuss any problems or issues you have been facing with Ruby on Rails.
+* TBA
 
 h3. Day 6 (6th of May)
 
-TBA
+* A standup meeting to discuss any problems or issues you have been facing with Ruby on Rails.
+* TBA
