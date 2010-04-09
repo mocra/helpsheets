@@ -1,2 +1,0 @@
-<a href="/" class="contents">contents</a>
-<h1>To view a list of articles head to the <a href="/">contents</a> page</h1>
