@@ -6,7 +6,7 @@ filter:
   - textile
 ---
 
-h2. Things we will cover
+h2. Things we will (try to) cover
 
 * Git
 * Console/Command Line
@@ -25,9 +25,9 @@ h2. Things we will cover
 * Active Record
 ** Basic
 ** Associations
-* Erb
+* erb
 * View Helpers - Forms
 * Errors
 * File Attachment
 * Resources
-* Xss-H, Attr_Accessible, Attr_Param_Logging, Protect from Forgery
+* xss-h, attr_accessible, attr_param_logging, protect from forgery
