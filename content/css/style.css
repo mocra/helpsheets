@@ -24,7 +24,7 @@ ol li ul{margin-top:.8em;}
 ol li ul li{margin-bottom:.1em;}
 
 a.contents{
-  position: absolute;
+  position: fixed;
   top: -1px;
   left: 10%;
   height:136px;
