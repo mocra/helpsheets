@@ -6,7 +6,7 @@ filter:
   - textile
 ---
 
-p(sidenote). Here is the loose schedule that we will try to stick to during the first weekend. These first 2 days will shape what we do for the remainder of the course.
+Here is the loose schedule that we will try to stick to during the first weekend. These first 2 days will shape what we do for the remainder of the course.
 
 h2. First weekend
 
@@ -15,15 +15,15 @@ h3. Day 1 (10th of April)
 *Morning*
 * Check installs
 * New app 'drnic twitter'
-* heroku + script/server
-* look + feel (layout/views 'copy twitter')
-* controllers
-* file IO (store and read)
-* ruby
-* partials
+* Heroku + script/server
+* Look + feel (layout/views 'copy twitter')
+* Controllers
+* File IO (store and read)
+* Ruby
+* Partials
 
 *Afternoon*
-* DB + Active Recprd
+* DB + Active Record
 * - SQL
 * Console, Logging
 * Scoffold_User
@@ -37,12 +37,12 @@ h3. Day 2 (11th of April)
 * Cucumber / test / unit
 ** existing coverage
 ** new feature
-* "follow"/"unfollow"
+* follow/unfollow
 * restrict/home
 ** namedscopes
 * Associations - hm through
-** routes
-** api /followers
+** Routes
+** API /followers
 *** /drnic/followers
 *** /index.rss
       
@@ -50,7 +50,7 @@ h3. Day 2 (11th of April)
 * Resources
 ** Tweet
 ** Follower
-* Validations (140 Chr)
+* Validations (140 Characters etc.)
 * Profile Page
 ** Input Types
 * Gravatar (Gem)
