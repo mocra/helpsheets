@@ -6,11 +6,11 @@ filter:
   - textile
 ---
 
-h2. Schedule
+p(sidenote). Here is the loose schedule that we will try to stick to during the first weekend. These first 2 days will shape what we do for the remainder of the course.
+
+h2. First weekend
 
 h3. Day 1 (10th of April)
-
-p(sidenote). Here is the loose schedule that we will try to stick to during the first weekend. These first 2 days will shape what we do for the remainder of the course.
 
 *Morning*
 * Check installs
@@ -55,6 +55,10 @@ h3. Day 2 (11th of April)
 ** Input Types
 * Gravatar (Gem)
 * Gems/Plugins
+
+h2. Follow ups
+
+The schedule for these days will be discussed further on the first weekend
 
 h3. Day 3 (15th of April)
 
