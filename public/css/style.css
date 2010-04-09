@@ -23,6 +23,19 @@ ol li ol{list-style-type:none;margin-top:1em;padding-left:1em;}
 ol li ul{margin-top:.8em;}
 ol li ul li{margin-bottom:.1em;}
 
+a.contents{
+  position: absolute;
+  top: -1px;
+  left: 10%;
+  height:136px;
+  width:37px;
+  background:url('../images/contents.jpg') no-repeat;
+  display:block;
+  text-indent: -9001px;
+  z-index: 9001;
+}
+a.contents:active{top:0;}
+
 /* sidenotes */
 .sidenote{
   float:left;
