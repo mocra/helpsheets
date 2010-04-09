@@ -31,6 +31,8 @@ h3. Day 1 (10th of April)
 * Views & Helpers
 * Sessions, Flashes, Params
 
+<hr/>
+
 h3. Day 2 (11th of April)
 
 *Morning*
@@ -55,6 +57,8 @@ h3. Day 2 (11th of April)
 ** Input Types
 * Gravatar (Gem)
 * Gems/Plugins
+
+<hr/>
 
 h2. Follow ups
 
