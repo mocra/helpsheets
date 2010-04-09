@@ -1,6 +1,6 @@
 ---
-title:       Course notes
-category: course-documentation
+title:      Course Notes
+category:   course-documentation
 filter:
   - erb
   - textile

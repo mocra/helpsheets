@@ -1,6 +1,6 @@
 ---
-title:  Ruby - Basics
-category: basics
+title:      Ruby - Basics
+category:   basics
 filter:
   - erb
   - textile

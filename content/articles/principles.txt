@@ -1,6 +1,6 @@
 ---
-title:       Principles
-category: course-documentation
+title:      Principles
+category:   course-documentation
 filter:
   - erb
   - textile

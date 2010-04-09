@@ -1,6 +1,6 @@
 ---
-title:       What we're making
-category: course-documentation
+title:      What We're Making
+category:   course-documentation
 filter:
   - erb
   - textile

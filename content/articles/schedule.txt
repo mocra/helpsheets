@@ -1,6 +1,6 @@
 ---
-title:       Schedule
-category: course-documentation
+title:      Schedule
+category:   course-documentation
 filter:
   - erb
   - textile

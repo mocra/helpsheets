@@ -1,6 +1,6 @@
 ---
-title:       Preparing for the course
-category: preparation
+title:      Preparing for the Course
+category:   preparation
 filter:
   - erb
   - textile
