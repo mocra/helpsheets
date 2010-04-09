@@ -1,0 +1,8 @@
+---
+title:       Assets
+filter:
+  - erb
+  - textile
+---
+
+Nothing to see here. To view a list of articles head to the <a href="/">contents</a> page
