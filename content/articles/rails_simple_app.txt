@@ -1,0 +1,105 @@
+---
+title:      Rails - Simple App
+category:   basics
+filter:
+  - erb
+  - textile
+---
+
+h2. Creating a simple app
+
+For example, this process is how we created our twitter app and other simple apps like a todo or blog app.
+
+We'll reproduce the steps for a simple blog.
+
+h3. New Rails app
+
+<% coderay(:lang => "bash") do -%>
+$ cd Sites
+$ rails myblog
+$ rm -rf public/index.html
+$ rake db:migrate
+<% end -%>
+
+h3. Creating first model
+
+<% coderay(:lang => "bash") do -%>
+$ script/generate model Article body:text title:string
+  exists  app/models/
+  exists  test/unit/
+  exists  test/fixtures/
+  create  app/models/article.rb
+  create  test/unit/article_test.rb
+  create  test/fixtures/articles.yml
+  create  db/migrate
+  create  db/migrate/20100410225216_create_articles.rb
+<% end -%>
+
+The generated migration file (e.g. @db/migrate/20100410225216_create_articles.rb@) looks like:
+
+<% coderay(:lang => "ruby") do -%>
+class CreateArticles < ActiveRecord::Migration
+  def self.up
+    create_table :articles do |t|
+      t.text :body
+      t.string :title
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :articles
+  end
+end
+<% end -%>
+
+After you optionally edit it, run the migrations:
+
+<% coderay(:lang => "bash") do -%>
+$ rake db:migrate
+<% end -%>
+
+
+Now create some articles in the console.
+
+<% coderay(:lang => "bash") do -%>
+$ script/console
+<% end %>
+
+<% coderay(:lang => "ruby") do -%>
+>> Article.create :title => "My first post", 
+    :body => "<p>This is my first post</p>"
+>> Article.create :title => "My second post", 
+    :body => "<p>This is another post.</p>"
+>> Article.count
+# => 2
+>> Article.all
+>> Article.find(1)
+>> Article.find_by_title "My second post"
+<% end -%>
+
+h3. Viewing our model via a controller
+
+<% coderay(:lang => "bash") do -%>
+$ script/generate controller Blog index
+<% end -%>
+
+Update the controller @app/controllers/blog_controller.rb@:
+
+<% coderay(:lang => "ruby") do -%>
+class BlogController < ApplicationController
+  def index
+    @articles = Article.all(:order => "created_at desc")
+  end
+end
+<% end -%>
+
+<% coderay(:lang => "rhtml") do -%>
+<h1>My awesome blog</h1>
+
+&lt;% @articles.each do |article| -%&gt;
+  <h2>&lt;%=h article.title %&gt;</h2>
+  
+  &lt;% article.body %&gt;
+&lt;% end -%&gt;
+<% end -%>

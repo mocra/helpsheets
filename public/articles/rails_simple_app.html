@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Mocra Helpsheets
+    </title>
+    <link href="../css/style.css" rel="stylesheet" media="all" />
+    <link href="../css/screen.css" rel="stylesheet" media="screen, projection" />
+    <link href="../css/print.css" rel="stylesheet" media="print" />
+    <link href="../css/coderay.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a href="../" class="contents">contents</a>
+    <div id="wrap">
+      <div id="footer">
+        <a href="http://mocra.com">
+          <img src="../images/logo.png" />
+        </a>
+        Learn Ruby on Rails Course
+        <div class="page"></div>
+      </div>
+      <div id="header">
+        <h1>
+          Rails - Simple App
+        </h1>
+      </div>
+      <div id="article">
+        <h2>Creating a simple app</h2>
+        <p>For example, this process is how we created our twitter app and other simple apps like a todo or blog app.</p>
+        <p>We&#8217;ll reproduce the steps for a simple blog.</p>
+        <h3>New Rails app</h3>
+        <div class="CodeRay">
+        <pre>$ cd Sites&#x000A;$ rails myblog&#x000A;$ rm -rf public/index.html&#x000A;$ rake db:migrate</pre>
+        </div>
+        <h3>Creating first model</h3>
+        <div class="CodeRay">
+        <pre>$ script/generate model Article body:text title:string&#x000A;  exists  app/models/&#x000A;  exists  test/unit/&#x000A;  exists  test/fixtures/&#x000A;  create  app/models/article.rb&#x000A;  create  test/unit/article_test.rb&#x000A;  create  test/fixtures/articles.yml&#x000A;  create  db/migrate&#x000A;  create  db/migrate/20100410225216_create_articles.rb</pre>
+        </div>
+        <p>The generated migration file (e.g. <code>db/migrate/20100410225216_create_articles.rb</code>) looks like:</p>
+        <div class="CodeRay">
+        <pre><span class="r">class</span> <span class="cl">CreateArticles</span> &lt; <span class="co">ActiveRecord</span>::<span class="co">Migration</span>&#x000A;  <span class="r">def</span> <span class="pc">self</span>.up&#x000A;    create_table <span class="sy">:articles</span> <span class="r">do</span> |t|&#x000A;      t.text <span class="sy">:body</span>&#x000A;      t.string <span class="sy">:title</span>&#x000A;      t.timestamps&#x000A;    <span class="r">end</span>&#x000A;  <span class="r">end</span>&#x000A;&#x000A;  <span class="r">def</span> <span class="pc">self</span>.down&#x000A;    drop_table <span class="sy">:articles</span>&#x000A;  <span class="r">end</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+        <p>After you optionally edit it, run the migrations:</p>
+        <div class="CodeRay">
+        <pre>$ rake db:migrate</pre>
+        </div>
+        <p>Now create some articles in the console.</p>
+        <div class="CodeRay">
+        <pre>$ script/console</pre>
+        </div>
+        <div class="CodeRay">
+        <pre>&gt;&gt; <span class="co">Article</span>.create <span class="sy">:title</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">My first post</span><span class="dl">&quot;</span></span>, &#x000A;    <span class="sy">:body</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">&lt;p&gt;This is my first post&lt;/p&gt;</span><span class="dl">&quot;</span></span>&#x000A;&gt;&gt; <span class="co">Article</span>.create <span class="sy">:title</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">My second post</span><span class="dl">&quot;</span></span>, &#x000A;    <span class="sy">:body</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">&lt;p&gt;This is another post.&lt;/p&gt;</span><span class="dl">&quot;</span></span>&#x000A;&gt;&gt; <span class="co">Article</span>.count&#x000A;<span class="c"># =&gt; 2</span>&#x000A;&gt;&gt; <span class="co">Article</span>.all&#x000A;&gt;&gt; <span class="co">Article</span>.find(<span class="i">1</span>)&#x000A;&gt;&gt; <span class="co">Article</span>.find_by_title <span class="s"><span class="dl">&quot;</span><span class="k">My second post</span><span class="dl">&quot;</span></span></pre>
+        </div>
+        <h3>Viewing our model via a controller</h3>
+        <div class="CodeRay">
+        <pre>$ script/generate controller Blog index</pre>
+        </div>
+        <p>Update the controller <code>app/controllers/blog_controller.rb</code>:</p>
+        <div class="CodeRay">
+        <pre><span class="r">class</span> <span class="cl">BlogController</span> &lt; <span class="co">ApplicationController</span>&#x000A;  <span class="r">def</span> <span class="fu">index</span>&#x000A;    <span class="iv">@articles</span> = <span class="co">Article</span>.all(<span class="sy">:order</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">created_at desc</span><span class="dl">&quot;</span></span>)&#x000A;  <span class="r">end</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+        <div class="CodeRay">
+        <pre><span class="ta">&lt;h1&gt;</span>My awesome blog<span class="ta">&lt;/h1&gt;</span>&#x000A;&#x000A;<span class="en">&amp;lt;</span>% @articles.each do |article| -%<span class="en">&amp;gt;</span>&#x000A;  <span class="ta">&lt;h2&gt;</span><span class="en">&amp;lt;</span>%=h article.title %<span class="en">&amp;gt;</span><span class="ta">&lt;/h2&gt;</span>&#x000A;  &#x000A;  <span class="en">&amp;lt;</span>% article.body %<span class="en">&amp;gt;</span>&#x000A;<span class="en">&amp;lt;</span>% end -%<span class="en">&amp;gt;</span></pre>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
