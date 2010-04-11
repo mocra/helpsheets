@@ -32,18 +32,19 @@ You have now written your first test, time to run it!
 
 <% coderay(:lang => "bash") do -%>
 $ rake cucumber
-#=> Using the default profile...
-#=> Feature: Is there a homepage
-#=>   In order for people to see the homepage
-#=>   The homepage should exist
-#=> 
-#=>   Scenario: Going to the homepage # features/create_tweet.feature:5
-#=>     Given I am on the homepage    # features/step_definitions/web_steps.rb:18
-#=>     Then I should see "Timeline"  # features/step_definitions/web_steps.rb:99
-#=> 
-#=> 1 scenario (1 passed)
-#=> 2 steps (2 passed)
-#=> 0m0.195s
+
+  Using the default profile...
+  Feature: Is there a homepage
+    In order for people to see the homepage
+    The homepage should exist
+
+    Scenario: Going to the homepage # features/create_tweet.feature:5
+      Given I am on the homepage    # features/step_definitions/web_steps.rb:18
+      Then I should see "Timeline"  # features/step_definitions/web_steps.rb:99
+
+  1 scenario (1 passed)
+  2 steps (2 passed)
+  0m0.195s
 <% end -%>
 
 All the steps passed. Congratulations!
