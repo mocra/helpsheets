@@ -4,13 +4,13 @@ task :default => :build
 desc 'deploy the site to the webserver'
 task :deploy => [:build, 'deploy:rsync']
 
-# EOF
+# Setting 
+SITE.output_dir = "public"
 
+# WIP: Auto pdf output
 task :pdf do
   articles = File.join(File.dirname(__FILE__), 'content','articles', '*')
   Dir[articles].each do |article|
     puts %Q{prince -o "output/articles/#{name}.pdf" "output/articles/#{name}.html"}
   end
 end
-
-SITE.output_dir = "public"
