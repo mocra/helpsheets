@@ -1,0 +1,10 @@
+---
+title:      Gist URLs
+filter:
+  - erb
+  - textile
+---
+
+Cuke feature: Posting an entry - "http://gist.github.com/362505":http://gist.github.com/362505
+Cuke feature: Admin - Create an entry - "http://gist.github.com/362519":http://gist.github.com/362519
+Cuke feature: Guest view entries - "http://gist.github.com/362525":http://gist.github.com/362525
