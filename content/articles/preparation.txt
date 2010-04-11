@@ -10,6 +10,14 @@ h2. The software we will be using
 
 We have compiled a list of software that we will be using over the course of the next few weeks and hopefully if you will continue to use it for many years to come. If you have any problems installing any of the software below please contact us prior to the course so that we can sort out any problems before we get started and don't waste any time on the day.
 
+h3. Sign up to these great web services
+
+We will be using a few web services throughout the course, so go ahead and grab yourself some shiny new accounts.
+
+* Heroku "http://api.heroku.com/signup":http://api.heroku.com/signup
+* Gravatar "http://en.gravatar.com/site/signup":http://en.gravatar.com/site/signup
+
+
 h3. This guide has been broken up into three sections: 
 
 "OS X":#osx, "Windows":#windows and "Linux (Ubuntu)":#linux
@@ -60,6 +68,33 @@ Open the DMG and install the package.
 $ git --version
 git version 1.7.0.3
 <% end -%>
+
+h3. Generate an SSH public key
+
+<% coderay(:lang => "bash") do -%>
+$ ssh-keygen -t rsa -C "<email>"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/<username>/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/<username>/.ssh/id_rsa.
+Your public key has been saved in /Users/<username>/.ssh/id_rsa.pub.
+The key fingerprint is:
+01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db <email>
+The key's randomart image is:
++--[ RSA 2048]----+
+|     .+   +      |
+|       = o O .   |
+|        = * *    |
+|       o = +     |
+|      o S .      |
+|     o o =       |
+|      o . E      |
+|                 |
+|                 |
++-----------------+
+<% end -%>
+
 
 h3. Text Editor
 
@@ -136,7 +171,7 @@ $ rails -v
 
 h3. Install sqlite3
 
-@$ gem install sqlite3-ruby --platform x86-mswin32@
+@$ gem install sqlite3-ruby@
 
 h3. Make a Sites folder
 
@@ -149,6 +184,10 @@ $ cd Sites
 $ rails testapp
 <% end -%>
 
+h3. Generate an SSH public key
+
+# Download _puttygen_ from "http://www.chiark.greenend.org.uk/~sgtatham/putty/":http://www.chiark.greenend.org.uk/~sgtatham/putty/, open then click _Generate_
+# STEP 2??? 
 
 h3. Text Editor
 

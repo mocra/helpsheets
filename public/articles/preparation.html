@@ -28,6 +28,12 @@
       <div id="article">
         <h2>The software we will be using</h2>
         <p>We have compiled a list of software that we will be using over the course of the next few weeks and hopefully if you will continue to use it for many years to come. If you have any problems installing any of the software below please contact us prior to the course so that we can sort out any problems before we get started and don&#8217;t waste any time on the day.</p>
+        <h3>Sign up to these great web services</h3>
+        <p>We will be using a few web services throughout the course, so go ahead and grab yourself some shiny new accounts.</p>
+        <ul>
+        	<li>Heroku <a href="http://api.heroku.com/signup">http://api.heroku.com/signup</a></li>
+        	<li>Gravatar <a href="http://en.gravatar.com/site/signup">http://en.gravatar.com/site/signup</a></li>
+        </ul>
         <h3>This guide has been broken up into three sections:</h3>
         <p><a href="#osx">OS X</a>, <a href="#windows">Windows</a> and <a href="#linux" title="Ubuntu">Linux</a></p>
         <hr />
@@ -54,6 +60,10 @@
         <p>Open the DMG and install the package.</p>
         <div class="CodeRay">
         <pre>$ git --version&#x000A;git version 1.7.0.3</pre>
+        </div>
+        <h3>Generate an SSH public key</h3>
+        <div class="CodeRay">
+        <pre>$ ssh-keygen -t rsa -C &quot;&lt;email&gt;&quot;&#x000A;Generating public/private rsa key pair.&#x000A;Enter file in which to save the key (/Users/&lt;username&gt;/.ssh/id_rsa):&#x000A;Enter passphrase (empty for no passphrase):&#x000A;Enter same passphrase again:&#x000A;Your identification has been saved in /Users/&lt;username&gt;/.ssh/id_rsa.&#x000A;Your public key has been saved in /Users/&lt;username&gt;/.ssh/id_rsa.pub.&#x000A;The key fingerprint is:&#x000A;01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db &lt;email&gt;&#x000A;The key's randomart image is:&#x000A;+--[ RSA 2048]----+&#x000A;|     .+   +      |&#x000A;|       = o O .   |&#x000A;|        = * *    |&#x000A;|       o = +     |&#x000A;|      o S .      |&#x000A;|     o o =       |&#x000A;|      o . E      |&#x000A;|                 |&#x000A;|                 |&#x000A;+-----------------+</pre>
         </div>
         <h3>Text Editor</h3>
         <p class="sidenote">&#8220;A bad craftsman blames his [bad] tools.&#8221;</p>
@@ -90,6 +100,7 @@
         	<li>git-completions</li>
         	<li>git-gui</li>
         	<li>make</li>
+        	<li>iconv</li>
         </ul>
         <h3>Install Console</h3>
         <p>Download and install Console from <a href="http://sourceforge.net/projects/console/">http://sourceforge.net/projects/console/</a> and go into the <em>settings</em> and click <em>add</em> under <em>tabs</em> then set the <em>shell</em> field to <code>c:\cygwin\bin\bash --login -i</code> and move it to the top of the tabs list.</p>
@@ -99,15 +110,20 @@
         </div>
         <h3>Install rails</h3>
         <div class="CodeRay">
-        <pre>$ gem install rails --include-dependencies&#x000A;$ rails -v&#x000A;2.3.5</pre>
+        <pre>$ gem install rails&#x000A;$ rails -v&#x000A;2.3.5</pre>
         </div>
         <h3>Install sqlite3</h3>
-        <p><code>$ gem install sqlite3-ruby --platform x86-mswin32</code></p>
+        <p><code>$ gem install sqlite3-ruby</code></p>
         <h3>Make a Sites folder</h3>
         <p class="sidenote">Somewhere to keep your rails applications</p>
         <div class="CodeRay">
         <pre>$ cd ~&#x000A;$ mkdir Sites&#x000A;$ cd Sites&#x000A;$ rails testapp</pre>
         </div>
+        <h3>Generate an SSH public key</h3>
+        <ol>
+        	<li>Download <em>puttygen</em> from <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">http://www.chiark.greenend.org.uk/~sgtatham/putty/</a>, open then click <em>Generate</em></li>
+        	<li>STEP 2???</li>
+        </ol>
         <h3>Text Editor</h3>
         <p class="sidenote">We recommend using E&nbsp;Text Editor</p>
         <p>This is what you are going to be spending most of your time in so use something you are comfortable with that also has good syntax highlighting support.</p>
