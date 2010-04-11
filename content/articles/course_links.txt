@@ -1,0 +1,19 @@
+---
+title:      Course Links
+category:   basics
+filter:
+  - erb
+  - textile
+---
+
+h3. Guides and help
+
+"http://guides.rubyonrails.org/":http://guides.rubyonrails.org/
+"http://railsapi.com/":http://railsapi.com/
+"http://stackoverflow.com/":http://stackoverflow.com/ (Not just for rails)
+
+h3. Git and site hosting
+
+"http://heroku.com/":http://heroku.com/
+"http://github.com/":http://github.com/
+"http://www.codebasehq.com/":http://www.codebasehq.com/
