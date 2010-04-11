@@ -1,0 +1,21 @@
+---
+title:      Testing with Cucumber
+category:   advanced
+filter:
+  - erb
+  - textile
+---
+
+<% coderay(:lang => "bash") do -%>
+
+gem install cucumber
+script/generate cucumber --caypabara
+
+# make a <featurename>.feature
+
+rake cucumber
+
+
+
+
+<% end -%>

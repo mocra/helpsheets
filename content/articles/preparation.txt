@@ -127,7 +127,7 @@ $ gem -v
 h3. Install rails
 
 <% coderay(:lang => "bash") do -%>
-$ gem install rails --include-dependencies
+$ gem install rails
 $ rails -v
 2.3.5
 <% end -%>
