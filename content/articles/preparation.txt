@@ -105,6 +105,7 @@ Download Cygwin from "www.cygwin.com/setup.exe":http://www.cygwin.com/setup.exe 
 * git-completions
 * git-gui
 * make
+* iconv
 
 h3. Install Console
 
