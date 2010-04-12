@@ -29,7 +29,7 @@
         <h2>Ruby on Rails &#8211; Basics</h2>
         <h3>Creating new Rails app</h3>
         <div class="CodeRay">
-        <pre>$ rails myapp&#x000A;$ cd myapp&#x000A;$ rake</pre>
+        <pre><span class="other">$</span> rails myapp&#x000A;<span class="other">$</span> <span class="fu">cd</span> myapp&#x000A;<span class="other">$</span> rakes</pre>
         </div>
         <p>The last line runs the (non-existent) test suite in your app. Why? Just to check that default configuration is working to databases etc.</p>
         <h3>Commands</h3>
@@ -40,17 +40,17 @@
         </ol>
         <p>Available rake tasks, and an example usage:</p>
         <div class="CodeRay">
-        <pre>$ rake -T&#x000A;$ rake routes</pre>
+        <pre><span class="other">$</span> rake <span class="argument">-T</span>&#x000A;<span class="other">$</span> rake routes</pre>
         </div>
         <p>Available scripts, and an example usage:</p>
         <p class="sidenote">Windows: &#8216;ls -al&#8217; equivalent to &#8216;dir&#8217;</p>
         <div class="CodeRay">
-        <pre>$ ls -al scripts/&#x000A;$ script/server</pre>
+        <pre><span class="other">$</span> ls <span class="argument">-al</span> scripts<span class="other">/</span>&#x000A;<span class="other">$</span> script<span class="other">/</span>server</pre>
         </div>
         <h3>Generators</h3>
         <p>Great way to learn Rails is to use generators.</p>
         <div class="CodeRay">
-        <pre>$ script/generate&#x000A;$ script/generate model Tweet message:string user_id:integer&#x000A;$ rake db:migrate</pre>
+        <pre><span class="other">$</span> script<span class="other">/</span>generate&#x000A;<span class="other">$</span> script<span class="other">/</span>generate model Tweet message<span class="other">:</span>string user_id<span class="other">:</span>integer&#x000A;<span class="other">$</span> rake db<span class="other">:</span>migrate</pre>
         </div>
         <p>View each generated file to see what is generated!</p>
         <h2>Active Record Association</h2>
@@ -59,9 +59,16 @@
         </blockquote>
         <p>Using twitter as an example, to setup basic <em>Active Record Association&#8217;s</em> add the following.</p>
         <div class="CodeRay">
+        <pre>script<span class="other">/</span>generate model user name<span class="other">:</span>string&#x000A;script<span class="other">/</span>generate model tweet user_id<span class="other">:</span>integer body<span class="other">:</span>text&#x000A;rake db<span class="other">:</span>migrate</pre>
+        </div>
+        <p>Now restart your server.</p>
+        <div class="CodeRay">
         <pre><span class="c"># /model/user.rb</span>&#x000A;<span class="r">class</span> <span class="cl">User</span> &lt; <span class="co">ActiveRecord</span>::<span class="co">Base</span>&#x000A;  has_many <span class="sy">:tweets</span>&#x000A;<span class="r">end</span>&#x000A;&#x000A;<span class="c"># /model/tweet.rb</span>&#x000A;<span class="r">class</span> <span class="cl">Tweet</span> &lt; <span class="co">ActiveRecord</span>::<span class="co">Base</span>&#x000A;  belongs_to <span class="sy">:user</span>&#x000A;<span class="r">end</span></pre>
         </div>
-        <p>Then in the database the tweet column must have user_id to record the relationship.</p>
+        <p>Now to test its all working!</p>
+        <div class="CodeRay">
+        <pre>script<span class="other">/</span>console&#x000A;&gt;&gt; user <span class="other">=</span> User<span class="other">.</span>create<span class="other">(</span><span class="other">:</span>name <span class="other">=</span>&gt; <span class="s"><span class="dl">&quot;</span><span class="k">odin</span><span class="dl">&quot;</span></span><span class="other">)</span>&#x000A;<span class="c">#=&gt; #&lt;User id: 1, name: &quot;odin&quot;, created_at: &quot;2010-04-12 01:06:58&quot;, updated_at: &quot;2010-04-12 01:06:58&quot;&gt;</span>&#x000A;&gt;&gt; tweet <span class="other">=</span> Tweet<span class="other">.</span>create<span class="other">(</span><span class="other">:</span>body <span class="other">=</span>&gt; <span class="s"><span class="dl">&quot;</span><span class="k">this is a tweet</span><span class="dl">&quot;</span></span><span class="other">,</span> <span class="other">:</span>user_id <span class="other">=</span>&gt; user<span class="other">.</span>id<span class="other">)</span>&#x000A;<span class="c">#=&gt; #&lt;Tweet id: 1, user_id: 1, body: &quot;this is a tweet&quot;, created_at: &quot;2010-04-12 01:08:26&quot;, updated_at: &quot;2010-04-12 01:08:26&quot;&gt;</span>&#x000A;&gt;&gt; tweet<span class="other">.</span>user&#x000A;  User Load <span class="other">(</span><span class="other">0</span><span class="other">.</span><span class="number">5</span>ms<span class="other">)</span>   SELECT * FROM <span class="s"><span class="dl">&quot;</span><span class="k">users</span><span class="dl">&quot;</span></span> WHERE <span class="other">(</span><span class="s"><span class="dl">&quot;</span><span class="k">users</span><span class="dl">&quot;</span></span><span class="other">.</span><span class="s"><span class="dl">&quot;</span><span class="k">id</span><span class="dl">&quot;</span></span> <span class="other">=</span> <span class="number">1</span><span class="other">)</span> &#x000A;<span class="c">#=&gt; #&lt;User id: 1, name: &quot;odin&quot;, created_at: &quot;2010-04-12 01:06:58&quot;, updated_at: &quot;2010-04-12 01:06:58&quot;&gt;</span>&#x000A;&gt;&gt; user<span class="other">.</span>tweets&#x000A;  Tweet Load <span class="other">(</span><span class="number">1</span><span class="other">.</span><span class="number">1</span>ms<span class="other">)</span>   SELECT * FROM <span class="s"><span class="dl">&quot;</span><span class="k">tweets</span><span class="dl">&quot;</span></span> WHERE <span class="other">(</span><span class="s"><span class="dl">&quot;</span><span class="k">tweets</span><span class="dl">&quot;</span></span><span class="other">.</span>user_id <span class="other">=</span> <span class="number">1</span><span class="other">)</span> &#x000A;<span class="c">#=&gt; [#&lt;Tweet id: 1, user_id: 1, body: &quot;this is a tweet&quot;, created_at: &quot;2010-04-12 01:08:26&quot;, updated_at: &quot;2010-04-12 01:08:26&quot;&gt;]</span></pre>
+        </div>
       </div>
     </div>
   </body>

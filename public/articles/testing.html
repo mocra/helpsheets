@@ -28,7 +28,7 @@
       <div id="article">
         <p>Cucumber is a tool that can execute plain-text functional descriptions as automated tests.</p>
         <div class="CodeRay">
-        <pre>gem install cucumber cucumber-rails caypabara&#x000A;script/generate cucumber --caypabara</pre>
+        <pre>gem install cucumber cucumber<span class="argument">-rails</span> caypabara&#x000A;script<span class="other">/</span>generate cucumber <span class="other">-</span><span class="argument">-caypabara</span></pre>
         </div>
         <p>Create a new file in the <em>/features</em> folder called <em>is_there_a_homepage.feature</em> with the following steps in it:</p>
         <div class="CodeRay">
@@ -37,7 +37,7 @@
         <p>Replace <code>&lt;text&gt;</code> with any text that appears on the homepage.</p>
         <p>You have now written your first test, time to run it!</p>
         <div class="CodeRay">
-        <pre>$ rake cucumber&#x000A;&#x000A;  Using the default profile...&#x000A;  Feature: Is there a homepage&#x000A;    In order for people to see the homepage&#x000A;    The homepage should exist&#x000A;&#x000A;    Scenario: Going to the homepage # features/create_tweet.feature:5&#x000A;      Given I am on the homepage    # features/step_definitions/web_steps.rb:18&#x000A;      Then I should see &quot;Timeline&quot;  # features/step_definitions/web_steps.rb:99&#x000A;&#x000A;  1 scenario (1 passed)&#x000A;  2 steps (2 passed)&#x000A;  0m0.195s</pre>
+        <pre><span class="other">$</span> rake cucumber&#x000A;&#x000A;  Using the default profile<span class="other">.</span><span class="other">.</span><span class="other">.</span>&#x000A;  Feature<span class="other">:</span> Is there a homepage&#x000A;    In order <span class="r">for</span> people to see the homepage&#x000A;    The homepage should exist&#x000A;&#x000A;    Scenario<span class="other">:</span> Going to the homepage <span class="c"># features/create_tweet.feature:5</span>&#x000A;      Given I am on the homepage    <span class="c"># features/step_definitions/web_steps.rb:18</span>&#x000A;      Then I should see <span class="s"><span class="dl">&quot;</span><span class="k">Timeline</span><span class="dl">&quot;</span></span>  <span class="c"># features/step_definitions/web_steps.rb:99</span>&#x000A;&#x000A;  <span class="number">1</span> scenario <span class="other">(</span><span class="number">1</span> passed<span class="other">)</span>&#x000A;  <span class="number">2</span> steps <span class="other">(</span><span class="number">2</span> passed<span class="other">)</span>&#x000A;  <span class="other">0</span>m0<span class="other">.</span><span class="number">195</span>s</pre>
         </div>
         <p>All the steps passed. Congratulations!</p>
       </div>

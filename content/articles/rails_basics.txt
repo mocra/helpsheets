@@ -14,7 +14,7 @@ h3. Creating new Rails app
 <% coderay(:lang => "bash") do -%>
 $ rails myapp
 $ cd myapp
-$ rake
+$ rakes
 <% end -%>
 
 The last line runs the (non-existent) test suite in your app. Why? Just to check that default configuration is working to databases etc.
@@ -60,6 +60,14 @@ bq. "Why do we need associations between models? Because they make common operat
 
 Using twitter as an example, to setup basic _Active Record Association's_ add the following.
 
+<% coderay(:lang => "bash") do -%>
+script/generate model user name:string
+script/generate model tweet user_id:integer body:text
+rake db:migrate
+<% end -%>
+
+Now restart your server.
+
 <% coderay(:lang => "ruby") do -%>
 # /model/user.rb
 class User < ActiveRecord::Base
@@ -72,5 +80,33 @@ class Tweet < ActiveRecord::Base
 end
 <% end -%>
 
-Then in the database the tweet column must have user_id to record the relationship.
+Now to test its all working!
+
+<% coderay(:lang => "bash") do -%>
+script/console
+>> user = User.create(:name => "odin")
+#=> #<User id: 1, name: "odin", created_at: "2010-04-12 01:06:58", updated_at: "2010-04-12 01:06:58">
+>> tweet = Tweet.create(:body => "this is a tweet", :user_id => user.id)
+#=> #<Tweet id: 1, user_id: 1, body: "this is a tweet", created_at: "2010-04-12 01:08:26", updated_at: "2010-04-12 01:08:26">
+>> tweet.user
+  User Load (0.5ms)   SELECT * FROM "users" WHERE ("users"."id" = 1) 
+#=> #<User id: 1, name: "odin", created_at: "2010-04-12 01:06:58", updated_at: "2010-04-12 01:06:58">
+>> user.tweets
+  Tweet Load (1.1ms)   SELECT * FROM "tweets" WHERE ("tweets".user_id = 1) 
+#=> [#<Tweet id: 1, user_id: 1, body: "this is a tweet", created_at: "2010-04-12 01:08:26", updated_at: "2010-04-12 01:08:26">]
+<% end -%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

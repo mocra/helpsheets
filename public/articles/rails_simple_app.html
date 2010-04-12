@@ -31,11 +31,11 @@
         <p>We&#8217;ll reproduce the steps for a simple blog.</p>
         <h3>New Rails app</h3>
         <div class="CodeRay">
-        <pre>$ cd Sites&#x000A;$ rails myblog&#x000A;$ rm -rf public/index.html&#x000A;$ rake db:migrate</pre>
+        <pre><span class="other">$</span> <span class="fu">cd</span> Sites&#x000A;<span class="other">$</span> rails myblog&#x000A;<span class="other">$</span> rm <span class="argument">-rf</span> public<span class="other">/</span>index<span class="other">.</span>html&#x000A;<span class="other">$</span> rake db<span class="other">:</span>migrate</pre>
         </div>
         <h3>Creating first model</h3>
         <div class="CodeRay">
-        <pre>$ script/generate model Article body:text title:string&#x000A;  exists  app/models/&#x000A;  exists  test/unit/&#x000A;  exists  test/fixtures/&#x000A;  create  app/models/article.rb&#x000A;  create  test/unit/article_test.rb&#x000A;  create  test/fixtures/articles.yml&#x000A;  create  db/migrate&#x000A;  create  db/migrate/20100410225216_create_articles.rb</pre>
+        <pre><span class="other">$</span> script<span class="other">/</span>generate model Article body<span class="other">:</span>text title<span class="other">:</span>string&#x000A;  exists  app<span class="other">/</span>models<span class="other">/</span>&#x000A;  exists  <span class="fu">test</span><span class="other">/</span>unit<span class="other">/</span>&#x000A;  exists  <span class="fu">test</span><span class="other">/</span>fixtures<span class="other">/</span>&#x000A;  create  app<span class="other">/</span>models<span class="other">/</span>article<span class="other">.</span>rb&#x000A;  create  <span class="fu">test</span><span class="other">/</span>unit<span class="other">/</span>article_test<span class="other">.</span>rb&#x000A;  create  <span class="fu">test</span><span class="other">/</span>fixtures<span class="other">/</span>articles<span class="other">.</span>yml&#x000A;  create  db<span class="other">/</span>migrate&#x000A;  create  db<span class="other">/</span>migrate<span class="other">/</span><span class="number">20100410225216</span><span class="other">_</span>create_articles<span class="other">.</span>rb</pre>
         </div>
         <p>The generated migration file (e.g. <code>db/migrate/20100410225216_create_articles.rb</code>) looks like:</p>
         <div class="CodeRay">
@@ -43,18 +43,18 @@
         </div>
         <p>After you optionally edit it, run the migrations:</p>
         <div class="CodeRay">
-        <pre>$ rake db:migrate</pre>
+        <pre><span class="other">$</span> rake db<span class="other">:</span>migrate</pre>
         </div>
         <p>Now create some articles in the console.</p>
         <div class="CodeRay">
-        <pre>$ script/console</pre>
+        <pre><span class="other">$</span> script<span class="other">/</span>console</pre>
         </div>
         <div class="CodeRay">
         <pre>&gt;&gt; <span class="co">Article</span>.create <span class="sy">:title</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">My first post</span><span class="dl">&quot;</span></span>, &#x000A;    <span class="sy">:body</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">&lt;p&gt;This is my first post&lt;/p&gt;</span><span class="dl">&quot;</span></span>&#x000A;&gt;&gt; <span class="co">Article</span>.create <span class="sy">:title</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">My second post</span><span class="dl">&quot;</span></span>, &#x000A;    <span class="sy">:body</span> =&gt; <span class="s"><span class="dl">&quot;</span><span class="k">&lt;p&gt;This is another post.&lt;/p&gt;</span><span class="dl">&quot;</span></span>&#x000A;&gt;&gt; <span class="co">Article</span>.count&#x000A;<span class="c"># =&gt; 2</span>&#x000A;&gt;&gt; <span class="co">Article</span>.all&#x000A;&gt;&gt; <span class="co">Article</span>.find(<span class="i">1</span>)&#x000A;&gt;&gt; <span class="co">Article</span>.find_by_title <span class="s"><span class="dl">&quot;</span><span class="k">My second post</span><span class="dl">&quot;</span></span></pre>
         </div>
         <h3>Viewing our model via a controller</h3>
         <div class="CodeRay">
-        <pre>$ script/generate controller Blog index</pre>
+        <pre><span class="other">$</span> script<span class="other">/</span>generate controller Blog index</pre>
         </div>
         <p>Update the controller <code>app/controllers/blog_controller.rb</code>:</p>
         <div class="CodeRay">
