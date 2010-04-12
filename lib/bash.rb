@@ -85,6 +85,10 @@ module CodeRay
               tokens << [match, :preprocessor]
             elsif match = scan(/\#.*/) # until eof  
               tokens << [match, :comment]
+            # First attempt at adding highlighting to lines starting w/ $
+            # elsif match = scan(/\$.*/) # until eof  
+            #   tokens << [match, :comment]
+            #
             # catch the rest as other
             else c = getch
               tokens << [c, :other]
