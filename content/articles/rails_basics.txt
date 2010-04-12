@@ -53,3 +53,24 @@ $ rake db:migrate
 <% end -%>
 
 View each generated file to see what is generated!
+
+h2. Active Record Association
+
+bq. "Why do we need associations between models? Because they make common operations simpler and easier in your code."
+
+Using twitter as an example, to setup basic _Active Record Association's_ add the following.
+
+<% coderay(:lang => "ruby") do -%>
+# /model/user.rb
+class User < ActiveRecord::Base
+  has_many :tweets
+end
+
+# /model/tweet.rb
+class Tweet < ActiveRecord::Base
+  belongs_to :user
+end
+<% end -%>
+
+Then in the database the tweet column must have user_id to record the relationship.
+

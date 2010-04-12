@@ -53,6 +53,15 @@
         <pre>$ script/generate&#x000A;$ script/generate model Tweet message:string user_id:integer&#x000A;$ rake db:migrate</pre>
         </div>
         <p>View each generated file to see what is generated!</p>
+        <h2>Active Record Association</h2>
+        <blockquote>
+        <p>&#8220;Why do we need associations between models? Because they make common operations simpler and easier in your code.&#8221;</p>
+        </blockquote>
+        <p>Using twitter as an example, to setup basic <em>Active Record Association&#8217;s</em> add the following.</p>
+        <div class="CodeRay">
+        <pre><span class="c"># /model/user.rb</span>&#x000A;<span class="r">class</span> <span class="cl">User</span> &lt; <span class="co">ActiveRecord</span>::<span class="co">Base</span>&#x000A;  has_many <span class="sy">:tweets</span>&#x000A;<span class="r">end</span>&#x000A;&#x000A;<span class="c"># /model/tweet.rb</span>&#x000A;<span class="r">class</span> <span class="cl">Tweet</span> &lt; <span class="co">ActiveRecord</span>::<span class="co">Base</span>&#x000A;  belongs_to <span class="sy">:user</span>&#x000A;<span class="r">end</span></pre>
+        </div>
+        <p>Then in the database the tweet column must have user_id to record the relationship.</p>
       </div>
     </div>
   </body>

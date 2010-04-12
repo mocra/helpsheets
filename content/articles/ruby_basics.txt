@@ -92,7 +92,7 @@ h3. Class definition
 p(sidenote). Class names must be in CamelCase
 
 <% coderay(:lang => "ruby") do -%>
-class GreetWorld
+class Greeter
   def initialize(name = "World")
     @name = name
   end
@@ -203,7 +203,7 @@ puts time_str
 if time_str =~ /(\d+):(\d+):(\d+)/
   p [$1, $2, $3]
 end
-# => ["16", "08", "45"]
+# => ["16", "05", "34"]
 <% end -%>
 
 h3. Replacement with gsub
